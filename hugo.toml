@@ -1,4 +1,4 @@
-baseURL = 'https://webapppentestguidelines.github.io/asmguidelines/'
+baseURL = 'https://webapppentestguidelines.github.io/asmguidance/'
 defaultContentLanguage = 'ja'
 languageCode = 'ja'
 title = 'ASM導入検討を進めるためのガイダンス（基礎編）'
@@ -16,7 +16,12 @@ theme = 'hugo-book'
 [params]
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/WebAppPentestGuidelines/newtechtestdoc'
+  BookRepo = 'https://github.com/WebAppPentestGuidelines/asmguidance'
+
+  # Enable "Edit this page" links for 'doc' page type.
+  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+  # Edit path must point to root directory of repo.
+  BookEditPath = 'edit/main'
 
   # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
   # type.
