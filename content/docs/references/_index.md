@@ -2,7 +2,7 @@
 title: "参考資料"
 weight: 8
 # bookFlatSection: false
-# bookToc: true
+bookToc: false
 # bookHidden: false
 # bookCollapseSection: false
 # bookComments: false
