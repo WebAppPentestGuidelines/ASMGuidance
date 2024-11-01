@@ -1,5 +1,6 @@
 ---
 title: "3.2 課題解決のための要件定義"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 2
 # bookFlatSection: false
 bookToc: false

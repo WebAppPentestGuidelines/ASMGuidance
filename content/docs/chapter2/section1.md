@@ -1,5 +1,6 @@
 ---
 title: "2.1 ASMとは"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 1
 # bookFlatSection: false
 bookToc: false

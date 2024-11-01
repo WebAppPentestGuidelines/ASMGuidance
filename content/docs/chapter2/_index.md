@@ -1,5 +1,6 @@
 ---
 title: "第2章 Attack Surface Management（ASM）とは何か"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 2
 # bookFlatSection: false
 bookToc: false

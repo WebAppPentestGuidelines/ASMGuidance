@@ -1,5 +1,6 @@
 ---
 title: "本当にASMが必要ですか？"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 3
 # bookFlatSection: false
 bookToc: false

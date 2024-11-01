@@ -1,5 +1,6 @@
 ---
 title: "5.1 現状のIT資産の特定と評価"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 1
 # bookFlatSection: false
 bookToc: false

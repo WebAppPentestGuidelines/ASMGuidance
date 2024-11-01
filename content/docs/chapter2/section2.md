@@ -1,5 +1,6 @@
 ---
 title: "2.2 ASMのプロセス"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 2
 # bookFlatSection: false
 bookToc: false

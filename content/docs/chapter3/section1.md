@@ -1,5 +1,6 @@
 ---
 title: "3.1 課題の把握"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 1
 # bookFlatSection: false
 bookToc: false

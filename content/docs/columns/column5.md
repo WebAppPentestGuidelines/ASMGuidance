@@ -1,5 +1,6 @@
 ---
 title: "ASMツールの拡張機能と付加価値"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 5
 # bookFlatSection: false
 bookToc: false

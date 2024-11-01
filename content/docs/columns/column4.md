@@ -1,5 +1,6 @@
 ---
 title: "ASM導入後に確認したいポイント"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 4
 # bookFlatSection: false
 bookToc: false

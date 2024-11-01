@@ -1,5 +1,6 @@
 ---
 title: "2.3 ASMや同カテゴリに類されることが多いツールやサービス"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 3
 # bookFlatSection: false
 bookToc: false

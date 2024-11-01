@@ -1,5 +1,6 @@
 ---
 title: "4.2 ASMツールの注意点"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 2
 # bookFlatSection: false
 bookToc: false

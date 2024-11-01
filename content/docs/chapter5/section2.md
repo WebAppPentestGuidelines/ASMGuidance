@@ -1,5 +1,6 @@
 ---
 title: "5.2 主管の決定・運用リソースの確保"
+description: "ASM導入検討を進めるためのガイダンス（基礎編）"
 weight: 2
 # bookFlatSection: false
 bookToc: false
