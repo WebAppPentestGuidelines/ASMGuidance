@@ -1,0 +1,75 @@
+<!doctype html><html lang=ja dir=ltr><head><meta name=generator content="Hugo 0.136.5"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  ASM導入検討を進めるためのガイダンス（基礎編）
+  #
+
+
+  本ドキュメントの目的
+  #
+
+「Attack Surface Management（ASM、攻撃対象領域管理、攻撃表面管理）」への注目が高まるとともに、様々なサービスやドキュメントが登場しています。
+しかし、「ASM」には複数の取り組み方法が存在し、用語の定義やドキュメントを解釈するのが難しく、「ASM」を活用したい組織が目的に沿ってツールやサービスを見分けることが難しくなっています。
+本ドキュメントは、「ASM」に関連する用語や活用方法を理解し、目的に沿ったサービスを選定することや、既存のドキュメント（様々な組織が作成したドキュメント）を読み解く上で助けとなる情報の提供を目的としています。
+
+  執筆者一覧
+  #
+
+
+  執筆者
+  #
+
+
+大塚 淳平（NRIセキュアテクノロジーズ株式会社）
+洲崎 俊（三井物産セキュアディレクション株式会社）
+高江洲 勲（三井物産セキュアディレクション株式会社）
+吉川 允樹
+平田 優
+幸田 将司（株式会社バラエナテック）
+岩間 湧（株式会社セキュアスカイ・テクノロジー）
+山口 凌（株式会社セキュアスカイ・テクノロジー）
+
+※順不同
+
+  レビュー・製作協力
+  #
+
+
+上野 宣（ISOG-J WG1 リーダー、OWASP Japan Leader、株式会社トライコーダ）
+国分 裕（ISOG-J WG1 サブリーダー、三井物産セキュアディレクション株式会社）
+吉田 聡（株式会社ラック）
+山崎 圭吾（株式会社ラック/ニューリジェンセキュリティ株式会社）
+瀬治山 豊（株式会社マクニカ）
+山﨑 剛弥（株式会社マクニカ）
+小西 達也（サイボウズ株式会社）
+大塚 純平（サイボウズ株式会社）
+浅井 健（株式会社エーアイセキュリティラボ）
+市川遼 (GMOサイバーセキュリティ byイエラエ株式会社)
+ISOG-J WG1一同
+
+※順不同
+
+  本プロジェクトに関わる組織について
+  #
+
+
+  NPO日本ネットワークセキュリティ協会（JNSA）について
+  #
+
+NPO日本ネットワークセキュリティ協会は、ネットワーク・セキュリティ製品を提供しているベンダー、システムインテグレータ、インターネットプロバイダ等ネットワークセキュリティシステムに携わるベンダーが結集し、ネットワーク社会の情報セキュリティレベルの維持・向上および日本における情報セキュリティ意識の啓発に努めるとともに、最新の情報セキュリティ技術および情報セキュリティへの脅威に関する情報提供等を行うことで、情報化社会へ貢献することを目的としています。"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://webapppentestguidelines.github.io/asmguidance/"><meta property="og:site_name" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:title" content="Introduction"><meta property="og:description" content="ASM導入検討を進めるためのガイダンス（基礎編） # 本ドキュメントの目的 # 「Attack Surface Management（ASM、攻撃対象領域管理、攻撃表面管理）」への注目が高まるとともに、様々なサービスやドキュメントが登場しています。
+しかし、「ASM」には複数の取り組み方法が存在し、用語の定義やドキュメントを解釈するのが難しく、「ASM」を活用したい組織が目的に沿ってツールやサービスを見分けることが難しくなっています。
+本ドキュメントは、「ASM」に関連する用語や活用方法を理解し、目的に沿ったサービスを選定することや、既存のドキュメント（様々な組織が作成したドキュメント）を読み解く上で助けとなる情報の提供を目的としています。
+執筆者一覧 # 執筆者 # 大塚 淳平（NRIセキュアテクノロジーズ株式会社） 洲崎 俊（三井物産セキュアディレクション株式会社） 高江洲 勲（三井物産セキュアディレクション株式会社） 吉川 允樹 平田 優 幸田 将司（株式会社バラエナテック） 岩間 湧（株式会社セキュアスカイ・テクノロジー） 山口 凌（株式会社セキュアスカイ・テクノロジー） ※順不同
+レビュー・製作協力 # 上野 宣（ISOG-J WG1 リーダー、OWASP Japan Leader、株式会社トライコーダ） 国分 裕（ISOG-J WG1 サブリーダー、三井物産セキュアディレクション株式会社） 吉田 聡（株式会社ラック） 山崎 圭吾（株式会社ラック/ニューリジェンセキュリティ株式会社） 瀬治山 豊（株式会社マクニカ） 山﨑 剛弥（株式会社マクニカ） 小西 達也（サイボウズ株式会社） 大塚 純平（サイボウズ株式会社） 浅井 健（株式会社エーアイセキュリティラボ） 市川遼 (GMOサイバーセキュリティ byイエラエ株式会社) ISOG-J WG1一同 ※順不同
+本プロジェクトに関わる組織について # NPO日本ネットワークセキュリティ協会（JNSA）について # NPO日本ネットワークセキュリティ協会は、ネットワーク・セキュリティ製品を提供しているベンダー、システムインテグレータ、インターネットプロバイダ等ネットワークセキュリティシステムに携わるベンダーが結集し、ネットワーク社会の情報セキュリティレベルの維持・向上および日本における情報セキュリティ意識の啓発に努めるとともに、最新の情報セキュリティ技術および情報セキュリティへの脅威に関する情報提供等を行うことで、情報化社会へ貢献することを目的としています。"><meta property="og:locale" content="ja"><meta property="og:type" content="website"><title>Introduction | ASM導入検討を進めるためのガイダンス（基礎編）</title>
+<link rel=icon href=/asmguidance/favicon.png><link rel=manifest href=/asmguidance/manifest.json><link rel=canonical href=https://webapppentestguidelines.github.io/asmguidance/><link rel=stylesheet href=/asmguidance/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin=anonymous><script defer src=/asmguidance/fuse.min.js></script><script defer src=/asmguidance/ja.search.min.a835d73be33b627d77d94b6f3301d0d02c7fa0525ffcf0a86e6de0afb430c6e9.js integrity="sha256-qDXXO+M7Yn132UtvMwHQ0Cx/oFJf/PCobm3gr7Qwxuk=" crossorigin=anonymous></script><script defer src=/asmguidance/sw.min.5e35f1f7710314cf82e98faf4e6f027c65da1340d2d852b64854b8a29634e510.js integrity="sha256-XjXx93EDFM+C6Y+vTm8CfGXaE0DS2FK2SFS4opY05RA=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://webapppentestguidelines.github.io/asmguidance/index.xml title=ASM導入検討を進めるためのガイダンス（基礎編）></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/asmguidance/><span>ASM導入検討を進めるためのガイダンス（基礎編）</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=検索 aria-label=検索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><span>第1章 はじめに</span><ul><li><a href=/asmguidance/docs/chapter1/section1/>1.1 ASM（Attack Surface Management）の必要性</a></li><li><a href=/asmguidance/docs/chapter1/section2/>1.2 本ドキュメントの構成と読み進めるための補足</a></li></ul></li><li><a href=/asmguidance/docs/chapter2/>第2章 Attack Surface Management（ASM）とは何か</a><ul><li><a href=/asmguidance/docs/chapter2/section1/>2.1 ASMとは</a></li><li><a href=/asmguidance/docs/chapter2/section2/>2.2 ASMのプロセス</a></li><li><a href=/asmguidance/docs/chapter2/section3/>2.3 ASMや同カテゴリに類されることが多いツールやサービス</a></li></ul></li><li><span>第3章 ASM導入が必要であるかの判断（ASMの要件定義）</span><ul><li><a href=/asmguidance/docs/chapter3/section1/>3.1 課題の把握</a></li><li><a href=/asmguidance/docs/chapter3/section2/>3.2 課題解決のための要件定義</a></li></ul></li><li><a href=/asmguidance/docs/chapter4/>第4章 ASMツール/サービスの選定</a><ul><li><a href=/asmguidance/docs/chapter4/section1/>4.1 ASMツールに求める機能</a></li><li><a href=/asmguidance/docs/chapter4/section2/>4.2 ASMツールの注意点</a></li></ul></li><li><span>第5章 ASMの運用体制の構築</span><ul><li><a href=/asmguidance/docs/chapter5/section1/>5.1 現状のIT資産の特定と評価</a></li><li><a href=/asmguidance/docs/chapter5/section2/>5.2 主管の決定・運用リソースの確保</a></li><li><a href=/asmguidance/docs/chapter5/section3/>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</a></li></ul></li><li><a href=/asmguidance/docs/chapter6/>第6章　ASM活用事例</a><ul></ul></li><li><a href=/asmguidance/docs/columns/>コラム</a><ul><li><a href=/asmguidance/docs/columns/column1/>ASMツールは脆弱性診断の代わりになる？</a></li><li><a href=/asmguidance/docs/columns/column2/>ASMツールとASMサービスの違い</a></li><li><a href=/asmguidance/docs/columns/column3/>本当にASMが必要ですか？</a></li><li><a href=/asmguidance/docs/columns/column4/>ASM導入後に確認したいポイント</a></li><li><a href=/asmguidance/docs/columns/column5/>ASMツールの拡張機能と付加価値</a></li></ul></li><li><a href=/asmguidance/docs/references/>参考資料</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/asmguidance/svg/menu.svg class=book-icon alt=Menu></label><h3>Introduction</h3><label for=toc-control></label></div></header><article class="markdown book-article"><h1 id=asm導入検討を進めるためのガイダンス基礎編>ASM導入検討を進めるためのガイダンス（基礎編）
+<a class=anchor href=#asm%e5%b0%8e%e5%85%a5%e6%a4%9c%e8%a8%8e%e3%82%92%e9%80%b2%e3%82%81%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ae%e3%82%ac%e3%82%a4%e3%83%80%e3%83%b3%e3%82%b9%e5%9f%ba%e7%a4%8e%e7%b7%a8>#</a></h1><h2 id=本ドキュメントの目的>本ドキュメントの目的
+<a class=anchor href=#%e6%9c%ac%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e7%9b%ae%e7%9a%84>#</a></h2><p>「Attack Surface Management（ASM、攻撃対象領域管理、攻撃表面管理）」への注目が高まるとともに、様々なサービスやドキュメントが登場しています。<br>しかし、「ASM」には複数の取り組み方法が存在し、用語の定義やドキュメントを解釈するのが難しく、「ASM」を活用したい組織が目的に沿ってツールやサービスを見分けることが難しくなっています。</p><p>本ドキュメントは、「ASM」に関連する用語や活用方法を理解し、目的に沿ったサービスを選定することや、既存のドキュメント（様々な組織が作成したドキュメント）を読み解く上で助けとなる情報の提供を目的としています。</p><h2 id=執筆者一覧>執筆者一覧
+<a class=anchor href=#%e5%9f%b7%e7%ad%86%e8%80%85%e4%b8%80%e8%a6%a7>#</a></h2><h3 id=執筆者>執筆者
+<a class=anchor href=#%e5%9f%b7%e7%ad%86%e8%80%85>#</a></h3><ul><li>大塚 淳平（NRIセキュアテクノロジーズ株式会社）</li><li>洲崎 俊（三井物産セキュアディレクション株式会社）</li><li>高江洲 勲（三井物産セキュアディレクション株式会社）</li><li>吉川 允樹</li><li>平田 優</li><li>幸田 将司（株式会社バラエナテック）</li><li>岩間 湧（株式会社セキュアスカイ・テクノロジー）</li><li>山口 凌（株式会社セキュアスカイ・テクノロジー）</li></ul><p>※順不同</p><h3 id=レビュー製作協力>レビュー・製作協力
+<a class=anchor href=#%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc%e8%a3%bd%e4%bd%9c%e5%8d%94%e5%8a%9b>#</a></h3><ul><li>上野 宣（ISOG-J WG1 リーダー、OWASP Japan Leader、株式会社トライコーダ）</li><li>国分 裕（ISOG-J WG1 サブリーダー、三井物産セキュアディレクション株式会社）</li><li>吉田 聡（株式会社ラック）</li><li>山崎 圭吾（株式会社ラック/ニューリジェンセキュリティ株式会社）</li><li>瀬治山 豊（株式会社マクニカ）</li><li>山﨑 剛弥（株式会社マクニカ）</li><li>小西 達也（サイボウズ株式会社）</li><li>大塚 純平（サイボウズ株式会社）</li><li>浅井 健（株式会社エーアイセキュリティラボ）</li><li>市川遼 (GMOサイバーセキュリティ byイエラエ株式会社)</li><li>ISOG-J WG1一同</li></ul><p>※順不同</p><h2 id=本プロジェクトに関わる組織について>本プロジェクトに関わる組織について
+<a class=anchor href=#%e6%9c%ac%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ab%e9%96%a2%e3%82%8f%e3%82%8b%e7%b5%84%e7%b9%94%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a></h2><h3 id=npo日本ネットワークセキュリティ協会jnsaについて>NPO日本ネットワークセキュリティ協会（JNSA）について
+<a class=anchor href=#npo%e6%97%a5%e6%9c%ac%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e5%8d%94%e4%bc%9ajnsa%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a></h3><p>NPO日本ネットワークセキュリティ協会は、ネットワーク・セキュリティ製品を提供しているベンダー、システムインテグレータ、インターネットプロバイダ等ネットワークセキュリティシステムに携わるベンダーが結集し、ネットワーク社会の情報セキュリティレベルの維持・向上および日本における情報セキュリティ意識の啓発に努めるとともに、最新の情報セキュリティ技術および情報セキュリティへの脅威に関する情報提供等を行うことで、情報化社会へ貢献することを目的としています。</p><p><a href=http://www.jnsa.org/>http://www.jnsa.org/</a></p><h3 id=日本セキュリティオペレーション事業者協議会isog-jについて>日本セキュリティオペレーション事業者協議会（ISOG-J）について
+<a class=anchor href=#%e6%97%a5%e6%9c%ac%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3%e3%82%aa%e3%83%9a%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e4%ba%8b%e6%a5%ad%e8%80%85%e5%8d%94%e8%ad%b0%e4%bc%9aisog-j%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a></h3><p>日本セキュリティオペレーション事業者協議会（Information Security Operation providers Group Japan 略称: ISOG-J）は、セキュリティオペレーション技術向上、オペレータ人材育成および関係する組織・団体間の連携を推進することによって、セキュリティオペレーションサービスの普及とサービスレベルの向上を促し、安全で安心して利用できるIT環境実現に寄与することを目的として設立されました。</p><p><a href=http://isog-j.org/>http://isog-j.org/</a></p><h3 id=本プロジェクトに関するお問い合わせ先>本プロジェクトに関するお問い合わせ先
+<a class=anchor href=#%e6%9c%ac%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b%e5%85%88>#</a></h3><p>本プロジェクトに関して質問や要望、改善すべき点や感想等ございましたら、本GitHubのIssueにてご連絡いただけますと幸いです。</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/commit/adacb8ad0d1286d5748ea550af3692ac108782d6 title='最終更新者 wild0ni0n | 2024年11月1日' target=_blank rel=noopener><img src=/asmguidance/svg/calendar.svg class=book-icon alt>
+<span>2024年11月1日</span></a></div><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/edit/main/content/_index.md target=_blank rel=noopener><img src=/asmguidance/svg/edit.svg class=book-icon alt>
+<span>このページを編集する</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/</link><description>Recent content in 第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/index.xml" rel="self" type="application/rss+xml"/><item><title>2.1 ASMとは</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmとは">
+ 2.1 ASMとは
+ &lt;a class="anchor" href="#21-asm%e3%81%a8%e3%81%af">#&lt;/a>
+&lt;/h1>
+&lt;p>「ASMとは」を記載する上で重要となるのが、ASMの解釈や定義です。しかし、&amp;ldquo;ASM&amp;quot;も管理対象である&amp;quot;AS（アタックサーフェス）&amp;ldquo;も様々なドキュメントで様々に表現されており定義が統一されていません。本ドキュメントでは新しい定義の創出による混乱を防ぐために、ASMの定義を&lt;a href="https://www.meti.go.jp/press/2023/05/20230529001/20230529001.html">「ASM（Attack Surface Management）導入ガイダンス～外部から把握出来る情報を用いて自組織のIT資産を発見し管理する～（経済産業省）」&lt;/a>と同意として記載を進めます。&lt;/p>
+&lt;h2 id="asmの定義">
+ ASMの定義
+ &lt;a class="anchor" href="#asm%e3%81%ae%e5%ae%9a%e7%be%a9">#&lt;/a>
+&lt;/h2>
+&lt;blockquote>
+&lt;p>組織の外部（インターネット）からアクセス可能な IT 資産を発⾒し、それらに存在する脆弱性などのリスクを継続的に検出・評価する⼀連のプロセス&lt;/p>
+&lt;/blockquote>
+&lt;p>上記は管理対象であるAS（アタックサーフェス）を「組織の外部（インターネット）からアクセス可能なIT資産」と定義しているための記載です。本ドキュメントにおいても、「1.2 ASMの必要性」でご紹介したASMに注目が集まった背景（課題）から、ASの定義を経済産業省のドキュメントと同様に「組織の外部（インターネット）からアクセス可能なIT資産」とします。&lt;/p>
+&lt;p>また、さらに定義の理解を難しくしているのが「IT資産」です。管理対象を「組織の外部からアクセス可能なIT資産」とそのまま捉えると、外部に露出している情報資産（従業員の情報、メールアドレス等）や詳細なシステム構成情報も管理対象に含まれる（含めるべき）という解釈も可能となります。本ドキュメントでは理解を進めやすくするために、IT資産の中でも、システムやサーバー、その構成情報やIPアドレス等を管理対象として想定しています。&lt;/p>
+&lt;p>本ドキュメントでのASM関連用語の定義は以下のとおりとしています。&lt;/p>
+&lt;h2 id="本ドキュメントでのasm関連用語の定義">
+ 本ドキュメントでのASM関連用語の定義
+ &lt;a class="anchor" href="#%e6%9c%ac%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88%e3%81%a7%e3%81%aeasm%e9%96%a2%e9%80%a3%e7%94%a8%e8%aa%9e%e3%81%ae%e5%ae%9a%e7%be%a9">#&lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>用語&lt;/th>
+ &lt;th>定義&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>AS、アタックサーフェス&lt;/td>
+ &lt;td>組織の外部（インターネット）からアクセス可能な IT 資産（システムやサーバー、IPアドレス等）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ASM&lt;/td>
+ &lt;td>組織の外部（インターネット）からアクセス可能な IT 資産を発⾒し、それらに存在する脆弱性などのリスクを継続的に検出・評価する⼀連のプロセス&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ASMツール&lt;/td>
+ &lt;td>ASMのプロセスを実現もしくは補助するためのツール&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ASMサービス&lt;/td>
+ &lt;td>ASMのプロセスを実現もしくは補助するために外部組織（セキュリティベンダ等）から提供を受けるサービス&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>2.2 ASMのプロセス</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmのプロセス">
+ 2.2 ASMのプロセス
+ &lt;a class="anchor" href="#22-asm%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9">#&lt;/a>
+&lt;/h1>
+&lt;p>本ドキュメントで参照する定義「組織の外部（インターネット）からアクセス可能な IT 資産を発⾒し、それらに存在する脆弱性などのリスクを継続的に検出・評価する⼀連のプロセス」は抽象度が高い状態です。改めてプロセスを紐解くと以下のように解釈可能です。&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>アタックサーフェスの検出（発見）&lt;br>
+組織の外部からアクセス可能なIT資産を検出（発見）します。
+&amp;ldquo;外部からアクセス可能な資産を検出する&amp;quot;という表現が重要なポイントで、必ずしも外部（インターネット上）から検出するのではなく外部からアクセス可能な資産を検出さえすれば方法は問われていません。これが検出方法の異なる製品やサービスがおしなべてASMと呼称される理由であると考えています。（製品やサービスの種別については後述します。）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>付加情報の収集とリスク評価&lt;br>
+発見したIT資産の情報と脆弱性を継続的に検出・評価します。
+発見したIT資産の構成情報（ポート、利用製品など）の取得や何らかの評価を行い、設定ミスや影響を受ける脆弱性があるかの確認をすることでリスクの度合いを評価します。脆弱性の有無を評価するための脆弱性スキャンは必須ではなく、エージェントなどにより、設定情報や利用製品情報を取得して脆弱性情報のカタログとの照らし合わせにより、対象IT資産のリスク評価を行うものもあります。継続的な評価をコンティニュアスモニタリング（常時監視）と関連付けている製品やサービスもあります。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>リスクへの対応（IT資産および対策状況の管理）&lt;br>
+アタックサーフェスの発見、リスク評価の後、IT資産管理とリスクへの対応に取り組みます。
+IT資産管理は、元から自分たちで取り組んでいたIT資産管理と組み合わせて一元的に管理できるように整理する等の取り組みが考えられます。ここで整理したIT資産の一覧が、次サイクルのアタックサーフェス検出の調査起点（探索のための種）となります。発見される未知のアタックサーフェスの量がある程度収束するまでは、高い頻度でサイクルを回すことが望ましいです。
+リスクへの対応は、既知のIT資産であれば担当部門に対応依頼をし、継続的なリスク評価の中で対応状況を確認すればよいですが、未知のIT資産の場合は担当部門を探すところから取り組む必要があるため、組織内で横断的な協力やトップダウンでの対策指示が必要となることもあります。&lt;/p>
+&lt;/li>
+&lt;/ol>
+
+
+&lt;script src="https://webapppentestguidelines.github.io/asmguidance/asmguidance/mermaid.min.js">&lt;/script>
+
+ &lt;script>mermaid.initialize({
+ "flowchart": {
+ "useMaxWidth":true
+ },
+ "theme": "default"
+}
+)&lt;/script>
+
+
+
+
+&lt;pre class="mermaid">
+flowchart TD
+ A[従来の資産管理（資産一覧）] 
+ B[1.アタックサーフェスの検出（発見）] 
+ C[2.情報取得とリスクの評価]
+ D[3.リスクへの対応]
+ A --> |インプット| B --> C --> D --> B
+ D --> |IT資産情報の棚卸| A
+
+&lt;/pre>
+
+&lt;h2 id="従来の管理方法との組み合わせによるasmならではの価値">
+ 従来の管理方法との組み合わせによるASMならではの価値
+ &lt;a class="anchor" href="#%e5%be%93%e6%9d%a5%e3%81%ae%e7%ae%a1%e7%90%86%e6%96%b9%e6%b3%95%e3%81%a8%e3%81%ae%e7%b5%84%e3%81%bf%e5%90%88%e3%82%8f%e3%81%9b%e3%81%ab%e3%82%88%e3%82%8basm%e3%81%aa%e3%82%89%e3%81%a7%e3%81%af%e3%81%ae%e4%be%a1%e5%80%a4">#&lt;/a>
+&lt;/h2>
+&lt;p>従来の管理方法（ルールベースでの管理）でIT資産を網羅的に把握し、把握した全てのIT資産、少なくとも全てのアタックサーフェスに対して脆弱性診断によるリスク評価を行うことができれば、理想的な管理状態に近いと考えられます。&lt;br>
+しかし、従来の管理方法での網羅的な把握も、全てのアタックサーフェスへの脆弱性診断も、コスト的な面から見て現実的ではありません。&lt;/p>
+&lt;p>ASMでのIT資産の検出＋リスク評価のプロセスが有効に働けば、従来の管理方法では拾いきれなかったIT資産が発見され、高リスクなIT資産を優先して対策可能になるため、ASMだけでよいと考える方もいると思います。しかし、ASMでは資産検出は検索やクローリングなどにより稼働しているシステムを探すアプローチが多いことから、全てのIT資産を把握しきることは難しく、内部情報との連携も難しいと考えられます。また、リスク評価においても脆弱性診断と同程度ではなく、簡易的なものであることが多いです。&lt;/p>
+&lt;p>そのため、従来の管理方法（内部で管理している情報）とASM（外部から取得した情報）を組み合わせて、従来の管理方法では漏れてしまっていたIT資産を把握するようにIT資産管理プロセスを組み立てることをお勧めします。また、脆弱性診断によるリスク評価についても、資産全体に簡易的な評価（ASMでの評価）を実施しつつ、より重要な資産や深い確認が必要であると確認された資産には脆弱性診断も実施するといったように、従来の管理方法とASMを組み合わせることで、よりASMの価値を実感できるようになります。&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>&lt;strong>補足&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
+&lt;li>「従来の管理方法でアタックサーフェスを十分に管理できている組織であればASMに取り組む必要性が低い。」というよりも、既に十分にASMに取り組めていると考えられます。自組織にASMが必要であるのかについては3章に記載します。&lt;/li>
+&lt;/ul>
+&lt;/blockquote></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
+ 2.3 ASMや同カテゴリに類されることが多いツールやサービス
+ &lt;a class="anchor" href="#23-asm%e3%82%84%e5%90%8c%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%81%ab%e9%a1%9e%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%8c%e5%a4%9a%e3%81%84%e3%83%84%e3%83%bc%e3%83%ab%e3%82%84%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9">#&lt;/a>
+&lt;/h1>
+&lt;p>2.1節のASMの定義のみでは、具体的なIT資産の発見（検出）の方法や継続的な評価プロセスは定義されていません。 &lt;br>
+そのため、ASMツールやASMサービスは、それぞれで資産の発見（検出）のための調査や情報取得方法、取得した情報の管理アプローチを持っています。&lt;/p>
+&lt;p>例えば、資産情報の取得を例にしても、Web上の資産を探索する、情報連携のためのエージェントを管理対象の資産に導入する、脆弱性スキャンと連携するなど、複数のアプローチがあります。そのため、検討しているASMツールやサービスがどのような機能を備えているか、どのような使い方を意図しているかを確認し、自組織に適したツールやサービスを採用する必要があります。&lt;/p>
+&lt;p>以下にASMや同じカテゴリに類されることが多いツールやサービスの主な特徴を記載します。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>種別&lt;/th>
+ &lt;th>主な利用目的&lt;/th>
+ &lt;th>概要&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>EASM(External Attack Surface Management)&lt;/td>
+ &lt;td>インターネットからアクセス可能なIT資産の探索（未知の資産の発見も含む）、脆弱性の調査&lt;/td>
+ &lt;td>インターネット上を探索し、自組織に関連したIT資産を発見、セキュリティチェックを実施し、リスクを評価する。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>CAASM(Cyber Asset Attack Surface Management)&lt;/td>
+ &lt;td>IT資産の脆弱性や設定管理&lt;/td>
+ &lt;td>クラウドサービスプロバイダのAPIや既存のセキュリティ製品の外部連携機能などを活用し、IT資産および利用製品、設定の情報を取得し、リスクを評価する。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>DRPS(Digital Risk Protection Service)&lt;/td>
+ &lt;td>外部からの脅威を検知・分析し、デジタルリスクを管理&lt;/td>
+ &lt;td>自組織を狙う脅威の可視化、ブランド保護、データ漏洩検知を行い、デジタル資産のリスクを評価する。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>TPRM(Third Party Risk Management)&lt;/td>
+ &lt;td>ビジネス関係にある組織から生じるリスクの特定・評価、対応・管理&lt;/td>
+ &lt;td>外部のサードパーティ企業との関係から生じるリスクを特定、評価、管理し、サプライチェーン全体のリスクを評価する。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>セキュリティリスクレーティング, セキュリティスコアリング&lt;/td>
+ &lt;td>組織のセキュリティ態勢を客観的にスコアリングし、リスクの高い領域の特定&lt;/td>
+ &lt;td>外部から観測可能な情報を非侵入的に収集・分析することで、組織のセキュリティ状態を定量的に評価し、組織のサイバーセキュリティ状況をスコア化する。&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;blockquote class="book-hint warning">
+&lt;p>&lt;strong>注意&lt;/strong>&lt;br>
+上記表は、ASMというカテゴリを全てを網羅する目的ではなく、&amp;ldquo;ASMっぽい&amp;quot;ツールやサービスの特徴を知っていただくために複数の種別を記載しています。&lt;br>
+そのため、各ツールやサービスの際立った特徴に注目しています。実際に提供されているツールやサービスは、複数の特徴を兼ね備えていたり、より広範な機能を備えていることもあります。&lt;br>
+（定義の誤りや加えるべきASMの種別がありましたらお知らせください。）&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

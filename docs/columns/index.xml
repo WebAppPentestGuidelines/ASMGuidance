@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>コラム on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/</link><description>Recent content in コラム on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/asmguidance/docs/columns/index.xml" rel="self" type="application/rss+xml"/><item><title>ASMツールは脆弱性診断の代わりになる？</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column1/</guid><description>&lt;h1 id="asmツールは脆弱性診断の代わりになる">
+ ASMツールは脆弱性診断の代わりになる？
+ &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%af%e8%84%86%e5%bc%b1%e6%80%a7%e8%a8%ba%e6%96%ad%e3%81%ae%e4%bb%a3%e3%82%8f%e3%82%8a%e3%81%ab%e3%81%aa%e3%82%8b">#&lt;/a>
+&lt;/h1>
+&lt;p>結論から述べると、ASMツールは脆弱性診断の代わりにはならず、その逆に脆弱性診断もASMツールの代わりにはなりません。&lt;/p>
+&lt;p>ASMツールと脆弱性診断の違いを簡単に言い表すと、一般的にASMツールは「広く浅く早く」、脆弱性診断は「狭く深く正確に」脆弱性の検出や評価を行うという違いがあります。&lt;br>
+両者の特徴と違いを理解し、組み合わせて利用することで高い効果を得ることができます。&lt;br>
+本コラムでは、ASMツールと脆弱性診断の特徴と違いについて解説します。&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>&lt;strong>補足&lt;/strong>&lt;br>
+本コラムにおける「脆弱性診断」は、専門家による手動診断サービスを想定して解説します。&lt;/p>
+&lt;/blockquote>
+&lt;p>以下の表は、ASMツールと脆弱性診断の一般的な特徴や違いを簡潔にまとめたものです。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;/th>
+ &lt;th>ASMツール&lt;/th>
+ &lt;th>脆弱性診断&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>実施の目的&lt;/td>
+ &lt;td>アタックサーフェスの検出と管理、リスクの早期発見&lt;/td>
+ &lt;td>指定したIT資産の脆弱性の発見と対策&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IT資産の発見&lt;/td>
+ &lt;td>発見する&lt;/td>
+ &lt;td>発見しない&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>対象の公開範囲&lt;/td>
+ &lt;td>外部公開されているIT資産のみ&lt;/td>
+ &lt;td>外部公開および内部(非公開)のIT資産&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>対象の選び方&lt;/td>
+ &lt;td>発見したIT資産全てを対象にできる&lt;/td>
+ &lt;td>自分たちで対象を指定&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>リスク評価が対象に及ぼす影響&lt;/td>
+ &lt;td>脆弱性診断に比べ少ない（詳細は後述）&lt;/td>
+ &lt;td>疑似攻撃や多数の検査用通信による副作用の可能性あり&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>リスク評価の頻度&lt;/td>
+ &lt;td>高頻度（毎日～月1回程度）&lt;/td>
+ &lt;td>低頻度（診断調整なども必要なため、年に1～数回程度）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>リスク評価の精度&lt;/td>
+ &lt;td>低い（検出漏れや誤検出が想定される）&lt;/td>
+ &lt;td>高い（脆弱性の存在を検証）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>リスク評価のコスト&lt;/td>
+ &lt;td>低い（安価）&lt;/td>
+ &lt;td>高い（高価）&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="asmツールの特徴">
+ ASMツールの特徴
+ &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e7%89%b9%e5%be%b4">#&lt;/a>
+&lt;/h2>
+&lt;p>ASMツールは、アタックサーフェスの検出と管理、リスクの早期発見を目的としており、「広く浅く早く」脆弱性の検出や評価を行う点が特徴です。
+脆弱性診断と比較すると、IT資産の発見機能を持つことが最も大きな特徴・違いとなります。&lt;br>
+これにより、未把握のIT資産も含めた自組織の外部公開IT資産を検出（発見）し、「広く」リスク評価の対象とすることができます。&lt;/p>
+&lt;p>一方で、リスク評価はツールによる機械的な検出・評価となるため、脆弱性診断と比較すると「浅く」なります。&lt;br>
+例えば、対象のIT資産が利用しているソフトウェアのバージョン情報などをうまく取得・推測できなかった場合、脆弱性を検出できなかったり（検出漏れ）、逆に既に修正・対策済みの脆弱性を誤検出してしまったりする可能性があります。&lt;br>
+また、機械的な評価のため、脆弱性が悪用可能かどうかについて、詳細な検証や技術的評価が欠ける場合もあります。&lt;/p>
+&lt;p>ただし、リスク評価が「浅く」なることはデメリットばかりではありません。&lt;br>
+リスク評価のためのスキャン通信による負荷やセキュリティ監視システムへの影響がほとんどなく（※）、ツールによる機械的なプロセスのため低コスト（少ない労力や費用）でリスク評価を実施することが可能です。&lt;br>
+従って、高頻度（毎日～月1回程度）のリスク評価を実施することが現実的となり、「早く」脆弱性を見つけ、リスクの早期発見につなげることが可能になります。&lt;/p>
+&lt;p>※なお、ASMツールによっては脆弱性診断相当の疑似攻撃スキャンを行う機能を有していることがあります。その場合、通信負荷や副作用などの影響を及ぼす可能性があるため注意が必要です。詳細は、4.2節「ASMツールの注意点」をご参照ください。&lt;/p>
+&lt;h2 id="脆弱性診断の特徴">
+ 脆弱性診断の特徴
+ &lt;a class="anchor" href="#%e8%84%86%e5%bc%b1%e6%80%a7%e8%a8%ba%e6%96%ad%e3%81%ae%e7%89%b9%e5%be%b4">#&lt;/a>
+&lt;/h2>
+&lt;p>脆弱性診断は、指定したIT資産の脆弱性の発見と対策を目的としており、「狭く深く正確に」脆弱性の検出や評価を行う点が特徴です。&lt;br>
+一般的に、脆弱性診断ではIT資産の発見を行うことはなく、予算やスケジュールなどを考慮してリスク評価対象のIT資産を指定（選択）する必要があります。&lt;br>
+ただし、ASMツールと異なり、リスク評価対象が外部公開IT資産に限定されないため、非公開のIT資産に対しても組織のネットワーク内部からリスク評価を実施することが可能です。&lt;br>
+脆弱性診断では、脆弱性診断サービスを提供するベンダーや、対象のIT資産の管理者など関係者との調整も必要なため、ASMツールと比較して高コスト（高い労力と費用）となる場合が多いです。&lt;br>
+従って、高頻度での実施は難しく、年に1～数回程度の実施となることが一般的であり、ASMツールと比較するとリスク評価の対象は「狭く」なります。&lt;/p>
+&lt;p>一方で、リスク評価は、専門家が疑似的な攻撃の通信を行い脆弱性の存在を検証・特定するため、ASMツールと比較して「深く正確に」なります。&lt;br>
+しかし、スキャン通信による高負荷が発生する可能性や、セキュリティ監視システムに影響を及ぼす可能性があるため、実施前には関係者との事前の調整が必要です。&lt;/p></description></item><item><title>ASMツールとASMサービスの違い</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column2/</guid><description>&lt;h1 id="asmツールとasmサービスの違い">
+ ASMツールとASMサービスの違い
+ &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%a8asm%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e9%81%95%e3%81%84">#&lt;/a>
+&lt;/h1>
+&lt;p>自組織へのASM導入を検討する際、「ASMツール」と「ASMサービス」という似たような２つの選択肢に直面したことはありませんか？それぞれのアプローチは特徴が異なり、導入する組織の規模やリソース、ニーズに応じて選択する必要があります。本コラムでは、これらの違いを理解し、適切なASMソリューションを選ぶためのポイントを解説します。&lt;/p>
+&lt;p>なお、本コラムではASMツールを「ツールベースで自動的にASMを行うソリューション」、ASMサービスを「ツールと専門家による分析を組み合わせてASMを行うソリューション」と定義します。どちらも自組織のIT資産発見やリスク評価を行うソリューションですが、検出精度や自動化レベル、運用負担、そしてコスト等に大きな違いがあります。&lt;/p>
+&lt;p>以下、主な指標でそれぞれ比較してみましょう。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">&lt;/th>
+ &lt;th style="text-align: left">ASMツール&lt;/th>
+ &lt;th style="text-align: left">ASMサービス&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">頻度&lt;/td>
+ &lt;td style="text-align: left">全自動または半自動化されており、IT資産の発見やリスクの評価を高頻度で行うことができます。&lt;/td>
+ &lt;td style="text-align: left">専門家が介入するため、ツールと比較してIT資産の発見やリスク評価の頻度は低くなります。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">検出精度&lt;/td>
+ &lt;td style="text-align: left">機械的にIT資産や脆弱性の発見を行うため、誤検知が多くなる傾向があります。&lt;/td>
+ &lt;td style="text-align: left">専門家が精査を行うため、誤検知は少なくなる傾向があります。また、専門家による分析により、ツール単体では難しい、より深い洞察や網羅性を得ることや、潜在的なリスクの見落としを最小化することができます。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">カスタマイズ性&lt;/td>
+ &lt;td style="text-align: left">機能が標準化されていることが多く、カスタマイズが制限されることがあります。このため、自組織のニーズに完全フィットしないASMになる場合があります。&lt;/td>
+ &lt;td style="text-align: left">専門家による柔軟なASMが行われることが多く、比較的カスタマイズは容易になります。このため、組織のニーズによりフィットしたASMを行うことができます。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">スケーラビリティ&lt;/td>
+ &lt;td style="text-align: left">機械的なASMが行われるため、導入組織の規模拡大にも柔軟に対応することができます。&lt;/td>
+ &lt;td style="text-align: left">専門家による手動のASMが行われるため、導入組織の規模拡大に伴い、サービス提供側のリソース制約により対応が難しくなる場合があります。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">専門知識の有無&lt;/td>
+ &lt;td style="text-align: left">ツールを自組織で運用し、検出結果を精査する必要があるため、ASMの知識が必要になります。&lt;/td>
+ &lt;td style="text-align: left">専門家にASM運用を任せることができるため、高度なASMの知識は不要となります。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">コスト&lt;/td>
+ &lt;td style="text-align: left">サービスと比べて初期導入コストは低く、運用費用も抑えられる場合があります。しかし、上記の通り、ツールの運用にはASMの知識が求められるため、自組織の相応の人材によるASM運用工数が増加する可能性があります。&lt;/td>
+ &lt;td style="text-align: left">ツールと比べてコストが高くなる傾向があります。一方で、ASM運用をサービス提供側に任せることができるため（※）、自組織のASM運用工数は軽減されます。特に、ASMに対応するリソースが不足している組織に有効です。※ASMサービスを利用する場合でも、サービスの結果を基に自組織のIT資産管理プロセスを自分たちで運用する必要はあります&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>上記の通り、ASMツールとASMサービスには、それぞれ異なる特長があることが分かったのではないでしょうか？組織の規模、予算、リソースに応じて、最適なソリューションを選ぶことが重要です。&lt;/p>
+&lt;p>自組織に最適なASMソリューションの導入に向けて、これらの違いを理解し、後悔しない選択を行いましょう。&lt;/p></description></item><item><title>本当にASMが必要ですか？</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column3/</guid><description>&lt;h1 id="本当にasmが必要ですか">
+ 本当にASMが必要ですか？
+ &lt;a class="anchor" href="#%e6%9c%ac%e5%bd%93%e3%81%abasm%e3%81%8c%e5%bf%85%e8%a6%81%e3%81%a7%e3%81%99%e3%81%8b">#&lt;/a>
+&lt;/h1>
+&lt;p>課題/要件を洗い出す過程で気づかれたかもしれませんが、課題/要件によっては従来の管理施策の見直しや強化をするで十分に解決できることがあります。&lt;/p>
+&lt;p>例えばASMで解決したい課題が、以下のような場合です。&lt;/p>
+&lt;ul>
+&lt;li>IT資産数が多く、台帳管理が難しい&lt;/li>
+&lt;li>IT資産が各部門で独自に取得されており、管理・把握できていない&lt;/li>
+&lt;li>IT資産数が多く、コスト的に脆弱性診断ができない&lt;/li>
+&lt;/ul>
+&lt;p>上記についてASMツールを導入することで解決しようとすると、従来の管理施策（IT資産台帳と脆弱性診断）と比べて、優れている点と劣っている点があります。&lt;/p>
+&lt;p>例えば、ASMツールが優れている点としては、一連のプロセスとして広範囲にIT資産を検出し、リスク評価まで行う点があります。&lt;/p>
+&lt;p>劣っている点としては、ASMツールによるIT資産の検出には限界があることです。完全に網羅してIT資産を検出できるわけではないため、従来の管理施策と比べて、ASMツールでの検出結果は漏れが多い状態となり得ます。加えて、ASMツールは、誤検知（自組織とは関係ないIT資産）を含む多くの既知・未知のIT資産が発見されるため、運用するために、技術（結果の理解）、コミュニケーション（複数部門や外部機関との調整）が可能な人材をアサインし、運用体制を整える必要があります。未知の資産が発見された場合には、担当部門や担当者を見つける必要があるために従来の管理施策よりも工数やリソースを要することもあります。&lt;/p>
+&lt;p>また、リスク評価についても、脆弱性診断より高い精度で脆弱性を検出できるわけでもありません。一部のASMツールでは高精度での脆弱性検出を謳っているがスキャン内容の攻撃性が高く、リスク評価前に調整が必要になるケースもあり、運用負荷が高まってしまうことが想定されます。&lt;/p>
+&lt;p>そのため、既存の管理施策（従来の管理施策）に改善の余地があるならば、既存の管理施策を強化することも一つの選択肢として適切です。
+以下のような解決策が考えられます。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>課題&lt;/th>
+ &lt;th>解決策&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>IT資産数が多く、台帳管理が難しい&lt;/td>
+ &lt;td>ASMではなく組織内部のシステム等から同様の情報取得を試みることが可能です。例えば、DNSが一元管理されており、情報に容易にアクセス可能であれば、IT資産の一覧を作成できます。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IT資産が各部門で独自に取得されており、管理・把握できていない&lt;/td>
+ &lt;td>IT資産管理のガバナンスの見直し（フロー、ポリシーの再整備）により対応可能です。ASMを導入するとしても、無法地帯にならないように導入と並行して整備するべきです。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IT資産数が多く、コスト的に脆弱性診断ができない&lt;/td>
+ &lt;td>ツールベースの診断を内製化して最低限でも脆弱性診断を実施する、CSPMなど脆弱性診断とは別の取り組みで設定やポリシーの不備を発見し安全性を保つなどの代替案も考えられます。&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>上記はあくまで例ですが、組織で何が課題となっており、既存の管理施策ではなぜ解決できないのかを整理してみましょう。&lt;br>
+整理することで、阻害要因や制約事項が明確になるかもしれません。&lt;/p>
+&lt;p>なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。&lt;/p></description></item><item><title>ASM導入後に確認したいポイント</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column4/</guid><description>&lt;h1 id="asm導入後に確認したいポイント">
+ ASM導入後に確認したいポイント
+ &lt;a class="anchor" href="#asm%e5%b0%8e%e5%85%a5%e5%be%8c%e3%81%ab%e7%a2%ba%e8%aa%8d%e3%81%97%e3%81%9f%e3%81%84%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88">#&lt;/a>
+&lt;/h1>
+&lt;p>ASMは導入するだけではなく運用することで価値を発揮します。&lt;br>
+自組織でのASM導入目的を満たせているか（第3章で把握した課題を解決できているか）が重要ですが、せっかくASMに取り組むのであれば、うまく活用できているかを確認するのはいかがでしょうか。&lt;/p>
+&lt;p>以下の表にASMの効果測定時に確認したいポイントを記載します。&lt;br>
+いずれの観点も運用プロセスにおいて効果が出ているかを確認するため、導入後、ある程度の期間が経過した後に確認してください。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>番号&lt;/th>
+ &lt;th>観点&lt;/th>
+ &lt;th>好ましい状態&lt;/th>
+ &lt;th>懸念がある状態&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>IT資産管理プロセスへのASM組み込み&lt;/td>
+ &lt;td>　既存のプロセスとASMを組み合わせられている&lt;br>（ASMで発見された資産を管理台帳に取り込み、そこから更にASMによるアタックサーフェスの検出プロセスを実行している）&lt;/td>
+ &lt;td>既存のプロセスとASMが独立している&lt;br>（ASMで発見された問題には対処するが、資産管理の仕組みなどと組み合わせられていない）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>2&lt;/td>
+ &lt;td>IT資産の把握&lt;/td>
+ &lt;td>ASMのプロセスが回ると共に、未知のIT資産の検出数が収束する&lt;br>（既存の資産管理方法＋ASMで十分な管理を実現）&lt;/td>
+ &lt;td>ASMのプロセスを回しても、想定外に未知のIT資産が発見され続ける&lt;br>（ガバナンスの不足により無法地帯となってしまっている可能性）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3&lt;/td>
+ &lt;td>リスクへの対応&lt;/td>
+ &lt;td>緊急対応を要する脆弱性公表時などに、即座に影響有無の調査や対応指示が可能&lt;/td>
+ &lt;td>何らかの理由で左記の対応ができない&lt;br>（アタックサーフェスの管理に必要な情報が不足している可能性）&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>ASMを運用することで得られる価値は、上記の「好ましい状態」を達成して、外部（インターネット）から見た自組織の安全を保つことです、
+一見すると、番号2は「懸念がある状態」の方がASMの価値を実感できると思う方が多いと思います。確かにASMツールやサービスの実行結果として、普段気付けなかった問題に気付けるのは価値があることです。しかし、ASMのプロセスを回して改善に取り組んでいるのに、未知のIT資産や対応が必要なリスクが発見され続けるのは、組織としてのガバナンスが追いていない無法地帯状態になってしまっていると考えられるため「懸念がある状態」としています。&lt;br>
+ASM導入による価値を得られやすい状態にするためにも、単に導入・運用するだけでなく、既存のIT資産管理プロセスと組み合わせたり、ASMの結果を踏まえて組織としてのガバナンスを見直したりすることをお勧めします。&lt;/p></description></item><item><title>ASMツールの拡張機能と付加価値</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column5/</guid><description>&lt;h1 id="asmツールの拡張機能と付加価値">
+ ASMツールの拡張機能と付加価値
+ &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%a8%e4%bb%98%e5%8a%a0%e4%be%a1%e5%80%a4">#&lt;/a>
+&lt;/h1>
+&lt;p>ASMツールには、これまでに説明した機能以外にも、様々な特徴・付加価値が提供されている場合があります。その中でも代表的なものを以下に紹介します。&lt;/p>
+&lt;h2 id="サプライチェーンマネジメント">
+ サプライチェーンマネジメント
+ &lt;a class="anchor" href="#%e3%82%b5%e3%83%97%e3%83%a9%e3%82%a4%e3%83%81%e3%82%a7%e3%83%bc%e3%83%b3%e3%83%9e%e3%83%8d%e3%82%b8%e3%83%a1%e3%83%b3%e3%83%88">#&lt;/a>
+&lt;/h2>
+&lt;p>自組織やグループ企業に加えて、取引先企業などのサプライチェーンもASMのプロセスの対象に含めることが可能なツールがあります。企業やドメイン単位でのスコアレーティング機能を備えており、自組織およびサプライチェーン（他社）のセキュリティ状況をスコア化することでサプライチェーン全体のリスク評価をできるようになっています。&lt;/p>
+&lt;h2 id="脅威インテリジェンス">
+ 脅威インテリジェンス
+ &lt;a class="anchor" href="#%e8%84%85%e5%a8%81%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%b8%e3%82%a7%e3%83%b3%e3%82%b9">#&lt;/a>
+&lt;/h2>
+&lt;p>脅威インテリジェンスツールにASMツールが統合されることもあります。脅威情報の収集・分析との組み合わせにより、攻撃者の動向などの脅威情報とアタックサーフェスの情報を組み合わせることで、より高度なリスク評価が可能になっています。&lt;/p>
+&lt;h2 id="脆弱性診断">
+ 脆弱性診断
+ &lt;a class="anchor" href="#%e8%84%86%e5%bc%b1%e6%80%a7%e8%a8%ba%e6%96%ad">#&lt;/a>
+&lt;/h2>
+&lt;p>ASMツールと脆弱性診断ツールを統合し、ASMでリスクが高いと示唆されたIT資産に対し、脆弱性診断を実行できるツールがあります。ASMによるリスク評価は対象のIT資産に影響を与えないように実行できる一方で、表層的な評価に留まり、多くの脆弱性を発見することは困難です。&lt;br>
+そこで、ASMのスキャンでリスクが高いと示唆されたIT資産に対して脆弱性診断を実行することで、より攻撃に悪用され得る脆弱性の有無を確認することができます。&lt;br>
+なお、ASMのスキャンと脆弱性診断の違いについては2.4節「ASMと脆弱性診断の違い」を参照ください。&lt;/p></description></item></channel></rss>

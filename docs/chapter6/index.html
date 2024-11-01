@@ -1,0 +1,135 @@
+<!doctype html><html lang=ja dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content='
+  第6章　ASM活用事例
+  #
+
+
+  事例1
+  #
+
+
+  企業Aの背景
+  #
+
+
+企業Aは国内外で多くのITサービスを展開しており、その統制は国内と海外で分かれている
+国内は3ラインモデルにより統制、海外のグループ会社は各社に運用管理を一任している
+
+
+  企業AのIT資産管理状況
+  #
+
+
+国内は上記背景のとおり統制しており、IT資産をある程度管理している
+国内の事業部門が利用するドメインは、おおよそ単一部署が管理しているが、全ドメインを把握しているわけではない
+国内の事業部門が利用するインフラは、各事業の特性に応じて、オンプレ、クラウド(AWS、GCP、AZURE、ORACLE、その他)上に構築されており、どのようなアセットがあるかは一元的に収集されていない
+統制を担うガバナンス部門（第2線）では、国内、海外とも、どのようなホスト(FQDN, IP等)があるか、どんなコンポーネントを利用しているかなど、全体の可視化ができてはおらず、現場(第一線)の運用に依存しているという状態
+
+
+  課題
+  #
+
+上記のような統制をする中で、以下の問題や課題が生じている。
+
+自組織に対する外部からのスキャンやOSINTによる調査結果が公開・報道されるケースの増加
+
+管理対象の資産も多く、外部からのスキャンは抑止できない（構っていられない）
+先んじて対策を行おうにも、IT資産全体の可視化が出来ていないため、ガバナンス部門（第2線）が把握できる範囲が限られてしまっている。
+海外の事業部門は統制による対策が進めづらい
+
+
+サイバー攻撃がよりHuman Operatedにシフトした傾向があり、攻撃者目線で自組織を評価し対策を講じる必要がある
+
+特に「攻撃の初期段階(Reconnaissance, Initial Access)」の観点から現状を把握する必要がある
+
+
+
+
+  ASM導入に関する要件定義
+  #
+
+課題1、2を解決するため、以下を主軸に要件を細分化をした。
+
+機能観点
+
+資産検出
+
+攻撃者と同様の手段で、幅広くIT資産を再帰的に検知、把握できること　
+特に、DNS, ASN, IP, SSL, Whois, etc
+対象のインフラを限定しないこと（オンプレ、クラウドどちらも対象にできること）
+
+
+セキュリティ評価
+
+攻撃者がよく利用する、攻撃の初期段階の観点で評価できること
+検出結果に対してリスク評価を行い、対策の優先順位付けができること
+
+
+
+
+
+また、ASMを運用するメンバーが1名だったため、運用負荷を減らすためにも以下も重要視した。
+
+運用観点
+
+結果の信頼性
+
+誤検知（偽陽性）の確認、データの信頼性の確認が必要
+Raw情報に近い情報が提供されていること
+
+
+履歴管理
+
+履歴情報が提供されていること（資産情報、脆弱性のいずれも）
+
+
+対策推進
+
+アクションに繋りやすい状態での情報が提供されていること
+検知理由が明瞭、是正策が提示されているなど
+
+
+他システム統合
+
+他システムと連携しやすいこと
+チケット管理システムの接続、APIが公開されているかなど
+
+
+
+
+
+
+  導入前に整理した点
+  #
+
+ASMの運用プロセス全体を整理してから開始するのは工数的に難しいため、初期の整理として、ASMツールを導入した際にハレーションが起きない/小さくできるように組み立て、動きながら改善していく方針とした。
+
+
+想定した"起こしたくない"ハレーション
+
+ASMツールによるアクセスの増加により、サービスサイドのモニタリング（アクセス分析など）に影響する
+ASMツールによるアクセスでセキュリティアラートが上がり、サービスサイドの調査工数が増える
+上記によるサービスサイドからガバナンスサイドへの問い合わせの増加
+情報共有不足による問い合わせ一次受け組織の負担増
+他の脆弱性管理施策との整合性の不一致
+
+
+
+上記への解決策'><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://webapppentestguidelines.github.io/asmguidance/docs/chapter6/"><meta property="og:site_name" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:title" content="第6章　ASM活用事例"><meta property="og:description" content='第6章　ASM活用事例 # 事例1 # 企業Aの背景 # 企業Aは国内外で多くのITサービスを展開しており、その統制は国内と海外で分かれている 国内は3ラインモデルにより統制、海外のグループ会社は各社に運用管理を一任している 企業AのIT資産管理状況 # 国内は上記背景のとおり統制しており、IT資産をある程度管理している 国内の事業部門が利用するドメインは、おおよそ単一部署が管理しているが、全ドメインを把握しているわけではない 国内の事業部門が利用するインフラは、各事業の特性に応じて、オンプレ、クラウド(AWS、GCP、AZURE、ORACLE、その他)上に構築されており、どのようなアセットがあるかは一元的に収集されていない 統制を担うガバナンス部門（第2線）では、国内、海外とも、どのようなホスト(FQDN, IP等)があるか、どんなコンポーネントを利用しているかなど、全体の可視化ができてはおらず、現場(第一線)の運用に依存しているという状態 課題 # 上記のような統制をする中で、以下の問題や課題が生じている。
+自組織に対する外部からのスキャンやOSINTによる調査結果が公開・報道されるケースの増加 管理対象の資産も多く、外部からのスキャンは抑止できない（構っていられない） 先んじて対策を行おうにも、IT資産全体の可視化が出来ていないため、ガバナンス部門（第2線）が把握できる範囲が限られてしまっている。 海外の事業部門は統制による対策が進めづらい サイバー攻撃がよりHuman Operatedにシフトした傾向があり、攻撃者目線で自組織を評価し対策を講じる必要がある 特に「攻撃の初期段階(Reconnaissance, Initial Access)」の観点から現状を把握する必要がある ASM導入に関する要件定義 # 課題1、2を解決するため、以下を主軸に要件を細分化をした。
+機能観点 資産検出 攻撃者と同様の手段で、幅広くIT資産を再帰的に検知、把握できること　特に、DNS, ASN, IP, SSL, Whois, etc 対象のインフラを限定しないこと（オンプレ、クラウドどちらも対象にできること） セキュリティ評価 攻撃者がよく利用する、攻撃の初期段階の観点で評価できること 検出結果に対してリスク評価を行い、対策の優先順位付けができること また、ASMを運用するメンバーが1名だったため、運用負荷を減らすためにも以下も重要視した。
+運用観点 結果の信頼性 誤検知（偽陽性）の確認、データの信頼性の確認が必要 Raw情報に近い情報が提供されていること 履歴管理 履歴情報が提供されていること（資産情報、脆弱性のいずれも） 対策推進 アクションに繋りやすい状態での情報が提供されていること 検知理由が明瞭、是正策が提示されているなど 他システム統合 他システムと連携しやすいこと チケット管理システムの接続、APIが公開されているかなど 導入前に整理した点 # ASMの運用プロセス全体を整理してから開始するのは工数的に難しいため、初期の整理として、ASMツールを導入した際にハレーションが起きない/小さくできるように組み立て、動きながら改善していく方針とした。
+想定した"起こしたくない"ハレーション
+ASMツールによるアクセスの増加により、サービスサイドのモニタリング（アクセス分析など）に影響する ASMツールによるアクセスでセキュリティアラートが上がり、サービスサイドの調査工数が増える 上記によるサービスサイドからガバナンスサイドへの問い合わせの増加 情報共有不足による問い合わせ一次受け組織の負担増 他の脆弱性管理施策との整合性の不一致 上記への解決策'><meta property="og:locale" content="ja"><meta property="og:type" content="website"><title>第6章　ASM活用事例 | ASM導入検討を進めるためのガイダンス（基礎編）</title>
+<link rel=icon href=/asmguidance/favicon.png><link rel=manifest href=/asmguidance/manifest.json><link rel=canonical href=https://webapppentestguidelines.github.io/asmguidance/docs/chapter6/><link rel=stylesheet href=/asmguidance/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin=anonymous><script defer src=/asmguidance/fuse.min.js></script><script defer src=/asmguidance/ja.search.min.a835d73be33b627d77d94b6f3301d0d02c7fa0525ffcf0a86e6de0afb430c6e9.js integrity="sha256-qDXXO+M7Yn132UtvMwHQ0Cx/oFJf/PCobm3gr7Qwxuk=" crossorigin=anonymous></script><script defer src=/asmguidance/sw.min.5e35f1f7710314cf82e98faf4e6f027c65da1340d2d852b64854b8a29634e510.js integrity="sha256-XjXx93EDFM+C6Y+vTm8CfGXaE0DS2FK2SFS4opY05RA=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://webapppentestguidelines.github.io/asmguidance/docs/chapter6/index.xml title=ASM導入検討を進めるためのガイダンス（基礎編）></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/asmguidance/><span>ASM導入検討を進めるためのガイダンス（基礎編）</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=検索 aria-label=検索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><span>第1章 はじめに</span><ul><li><a href=/asmguidance/docs/chapter1/section1/>1.1 ASM（Attack Surface Management）の必要性</a></li><li><a href=/asmguidance/docs/chapter1/section2/>1.2 本ドキュメントの構成と読み進めるための補足</a></li></ul></li><li><a href=/asmguidance/docs/chapter2/>第2章 Attack Surface Management（ASM）とは何か</a><ul><li><a href=/asmguidance/docs/chapter2/section1/>2.1 ASMとは</a></li><li><a href=/asmguidance/docs/chapter2/section2/>2.2 ASMのプロセス</a></li><li><a href=/asmguidance/docs/chapter2/section3/>2.3 ASMや同カテゴリに類されることが多いツールやサービス</a></li></ul></li><li><span>第3章 ASM導入が必要であるかの判断（ASMの要件定義）</span><ul><li><a href=/asmguidance/docs/chapter3/section1/>3.1 課題の把握</a></li><li><a href=/asmguidance/docs/chapter3/section2/>3.2 課題解決のための要件定義</a></li></ul></li><li><a href=/asmguidance/docs/chapter4/>第4章 ASMツール/サービスの選定</a><ul><li><a href=/asmguidance/docs/chapter4/section1/>4.1 ASMツールに求める機能</a></li><li><a href=/asmguidance/docs/chapter4/section2/>4.2 ASMツールの注意点</a></li></ul></li><li><span>第5章 ASMの運用体制の構築</span><ul><li><a href=/asmguidance/docs/chapter5/section1/>5.1 現状のIT資産の特定と評価</a></li><li><a href=/asmguidance/docs/chapter5/section2/>5.2 主管の決定・運用リソースの確保</a></li><li><a href=/asmguidance/docs/chapter5/section3/>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</a></li></ul></li><li><a href=/asmguidance/docs/chapter6/ class=active>第6章　ASM活用事例</a><ul></ul></li><li><a href=/asmguidance/docs/columns/>コラム</a><ul><li><a href=/asmguidance/docs/columns/column1/>ASMツールは脆弱性診断の代わりになる？</a></li><li><a href=/asmguidance/docs/columns/column2/>ASMツールとASMサービスの違い</a></li><li><a href=/asmguidance/docs/columns/column3/>本当にASMが必要ですか？</a></li><li><a href=/asmguidance/docs/columns/column4/>ASM導入後に確認したいポイント</a></li><li><a href=/asmguidance/docs/columns/column5/>ASMツールの拡張機能と付加価値</a></li></ul></li><li><a href=/asmguidance/docs/references/>参考資料</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/asmguidance/svg/menu.svg class=book-icon alt=Menu></label><h3>第6章　ASM活用事例</h3><label for=toc-control><img src=/asmguidance/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#事例1>事例1</a><ul><li><a href=#企業aの背景>企業Aの背景</a></li><li><a href=#企業aのit資産管理状況>企業AのIT資産管理状況</a></li><li><a href=#課題>課題</a></li><li><a href=#asm導入に関する要件定義>ASM導入に関する要件定義</a></li><li><a href=#導入前に整理した点>導入前に整理した点</a></li><li><a href=#導入後に整理した点>導入後に整理した点</a></li><li><a href=#導入効果>導入効果</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=第6章asm活用事例>第6章　ASM活用事例
+<a class=anchor href=#%e7%ac%ac6%e7%ab%a0asm%e6%b4%bb%e7%94%a8%e4%ba%8b%e4%be%8b>#</a></h1><h2 id=事例1>事例1
+<a class=anchor href=#%e4%ba%8b%e4%be%8b1>#</a></h2><h3 id=企業aの背景>企業Aの背景
+<a class=anchor href=#%e4%bc%81%e6%a5%ada%e3%81%ae%e8%83%8c%e6%99%af>#</a></h3><ul><li>企業Aは国内外で多くのITサービスを展開しており、その統制は国内と海外で分かれている</li><li>国内は<a href=https://www.iiajapan.com/leg/pdf/data/iia/2020.07_1_Three-Lines-Model-Updated-Japanese.pdf>3ラインモデル</a>により統制、海外のグループ会社は各社に運用管理を一任している</li></ul><h3 id=企業aのit資産管理状況>企業AのIT資産管理状況
+<a class=anchor href=#%e4%bc%81%e6%a5%ada%e3%81%aeit%e8%b3%87%e7%94%a3%e7%ae%a1%e7%90%86%e7%8a%b6%e6%b3%81>#</a></h3><ul><li>国内は上記背景のとおり統制しており、IT資産をある程度管理している</li><li>国内の事業部門が利用するドメインは、おおよそ単一部署が管理しているが、全ドメインを把握しているわけではない</li><li>国内の事業部門が利用するインフラは、各事業の特性に応じて、オンプレ、クラウド(AWS、GCP、AZURE、ORACLE、その他)上に構築されており、<strong>どのようなアセットがあるかは一元的に収集されていない</strong></li><li>統制を担うガバナンス部門（第2線）では、国内、海外とも、どのようなホスト(FQDN, IP等)があるか、どんなコンポーネントを利用しているかなど、<strong>全体の可視化ができてはおらず、現場(第一線)の運用に依存しているという状態</strong></li></ul><h3 id=課題>課題
+<a class=anchor href=#%e8%aa%b2%e9%a1%8c>#</a></h3><p>上記のような統制をする中で、以下の問題や課題が生じている。</p><ol><li>自組織に対する外部からのスキャンやOSINTによる調査結果が公開・報道されるケースの増加<ul><li>管理対象の資産も多く、外部からのスキャンは抑止できない（構っていられない）</li><li>先んじて対策を行おうにも、IT資産全体の可視化が出来ていないため、ガバナンス部門（第2線）が把握できる範囲が限られてしまっている。</li><li>海外の事業部門は統制による対策が進めづらい</li></ul></li><li>サイバー攻撃がよりHuman Operatedにシフトした傾向があり、攻撃者目線で自組織を評価し対策を講じる必要がある<ul><li>特に「攻撃の初期段階(Reconnaissance, Initial Access)」の観点から現状を把握する必要がある</li></ul></li></ol><h3 id=asm導入に関する要件定義>ASM導入に関する要件定義
+<a class=anchor href=#asm%e5%b0%8e%e5%85%a5%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e8%a6%81%e4%bb%b6%e5%ae%9a%e7%be%a9>#</a></h3><p>課題1、2を解決するため、以下を主軸に要件を細分化をした。</p><ul><li>機能観点<ul><li>資産検出<ul><li>攻撃者と同様の手段で、幅広くIT資産を再帰的に検知、把握できること　</li><li>特に、DNS, ASN, IP, SSL, Whois, etc</li><li>対象のインフラを限定しないこと（オンプレ、クラウドどちらも対象にできること）</li></ul></li><li>セキュリティ評価<ul><li>攻撃者がよく利用する、攻撃の初期段階の観点で評価できること</li><li>検出結果に対してリスク評価を行い、対策の優先順位付けができること</li></ul></li></ul></li></ul><p>また、ASMを運用するメンバーが1名だったため、運用負荷を減らすためにも以下も重要視した。</p><ul><li>運用観点<ul><li>結果の信頼性<ul><li>誤検知（偽陽性）の確認、データの信頼性の確認が必要</li><li>Raw情報に近い情報が提供されていること</li></ul></li><li>履歴管理<ul><li>履歴情報が提供されていること（資産情報、脆弱性のいずれも）</li></ul></li><li>対策推進<ul><li>アクションに繋りやすい状態での情報が提供されていること</li><li>検知理由が明瞭、是正策が提示されているなど</li></ul></li><li>他システム統合<ul><li>他システムと連携しやすいこと</li><li>チケット管理システムの接続、APIが公開されているかなど</li></ul></li></ul></li></ul><h3 id=導入前に整理した点>導入前に整理した点
+<a class=anchor href=#%e5%b0%8e%e5%85%a5%e5%89%8d%e3%81%ab%e6%95%b4%e7%90%86%e3%81%97%e3%81%9f%e7%82%b9>#</a></h3><p>ASMの運用プロセス全体を整理してから開始するのは工数的に難しいため、初期の整理として、ASMツールを導入した際にハレーションが起きない/小さくできるように組み立て、動きながら改善していく方針とした。</p><ul><li><p>想定した"起こしたくない"ハレーション</p><ul><li>ASMツールによるアクセスの増加により、サービスサイドのモニタリング（アクセス分析など）に影響する</li><li>ASMツールによるアクセスでセキュリティアラートが上がり、サービスサイドの調査工数が増える</li><li>上記によるサービスサイドからガバナンスサイドへの問い合わせの増加</li><li>情報共有不足による問い合わせ一次受け組織の負担増</li><li>他の脆弱性管理施策との整合性の不一致</li></ul></li><li><p>上記への解決策</p><ul><li>対象範囲の決定</li><li>コミュニケーションフロー<ul><li>脆弱性検査と異なり、ASMツールでは検出したアタックサーフェスがどの事業部門のものであるのかが不明なことがある</li><li>そのため、持ち主不明のアタックサーフェスが見つかった場合に誰が主体として動いてもらえるのかの整理が重要である</li><li>幸いにも3ラインモデルにより、第1線に責任者がいるため、各責任者がハンドリングを一任する合意形成を行った</li></ul></li><li>対象サービスへの事前共有・周知<ul><li>社内のコミュニケーションラインでの通知やサービスオーナーへの共有を実施</li><li>更にASMツールによって、サービスサイドのエンジニアの負担が増加するのは本意では無いため、エンジニア向けにも周知や自動通知botの設定を実施</li></ul></li><li>脆弱性のリスクレベルの定義<ul><li>重視すべきリスクの整理（サービスサイドが対応すべきリスクの明確化、受容するリスクの整理）を実施</li><li>発見された問題点全てに対応依頼をするのではなく、予め対応すべき問題点（レベル感）を決定し、合意形成を行った</li></ul></li></ul></li></ul><h3 id=導入後に整理した点>導入後に整理した点
+<a class=anchor href=#%e5%b0%8e%e5%85%a5%e5%be%8c%e3%81%ab%e6%95%b4%e7%90%86%e3%81%97%e3%81%9f%e7%82%b9>#</a></h3><p>運用していく中で以下は継続して整理・改善を行う必要があった。</p><ul><li>脆弱性のリスクレベルの見直し<ul><li>新規の脆弱性が発見された際の判断（基準への取り込み）</li><li>最新の脅威動向を踏まえた対応レベルの見直し</li><li>他施策とコンフリクトしないようなレベルの調整</li></ul></li><li>コミュニケーション・運用フローの改善<ul><li>担当者へ共有する情報粒度の見直し</li><li>体制変更に伴う担当者整理</li><li>関係者からのQAを反映</li><li>コミュニケーション履歴の保存</li></ul></li></ul><h3 id=導入効果>導入効果
+<a class=anchor href=#%e5%b0%8e%e5%85%a5%e5%8a%b9%e6%9e%9c>#</a></h3><p>上記の取り組みにより、ASMの導入・継続的な運用ができ、課題解決に寄与する結果となった。</p><ul><li>ガバナンス部門でのIT資産全体の可視性が向上<ul><li>緊急対応が必要な脆弱性の公表時など、必要な時にASM上でどのような状態を検索可能となった</li><li>脆弱性スキャンなど個別の調査結果とASMの結果を組み合わせることで、状況を踏まえた対策を打てる状態になった</li></ul></li><li>事業部門でも外部公開に伴うリスクへの理解が深まった<ul><li>事業部門も含めた運用プロセス（コミュニケーション、対策推進）が実現でき、調整過程で事業部門側の理解も深まった</li></ul></li></ul><p>一方、課題もある程度残っている。</p><ul><li>IT資産数が膨大だと運用負荷も膨大（管理対象数に比例して運用負荷も高まる）<ul><li>誤検知の処理</li><li>再検知の処理</li><li>関係者へのコミュニケーションなど</li></ul></li><li>ASMだけでは全ては解決しない<ul><li>検出できないIT資産も存在する（IT資産数が多すぎると漏れは必ず発生する）</li><li>細かなIT資産管理をしたい場合には情報が不十分（例：EASMでは導入されているソフトウェアなどの情報は取得不可）</li><li>セキュリティ評価も実施する場合、対象となるアタックサーフェス（サービス）の負荷も考慮する必要がある</li><li>他のセキュリティソリューションと同様、リスクが顕在化しない場合は費用対効果の説明が難しい</li></ul></li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/commit/43f7204bc00539562ef8faf7aad75b26efaf41cb title='最終更新者 wild0ni0n | 2024年10月29日' target=_blank rel=noopener><img src=/asmguidance/svg/calendar.svg class=book-icon alt>
+<span>2024年10月29日</span></a></div><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/edit/main/content/docs/chapter6/_index.md target=_blank rel=noopener><img src=/asmguidance/svg/edit.svg class=book-icon alt>
+<span>このページを編集する</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#事例1>事例1</a><ul><li><a href=#企業aの背景>企業Aの背景</a></li><li><a href=#企業aのit資産管理状況>企業AのIT資産管理状況</a></li><li><a href=#課題>課題</a></li><li><a href=#asm導入に関する要件定義>ASM導入に関する要件定義</a></li><li><a href=#導入前に整理した点>導入前に整理した点</a></li><li><a href=#導入後に整理した点>導入後に整理した点</a></li><li><a href=#導入効果>導入効果</a></li></ul></li></ul></nav></div></aside></main></body></html>

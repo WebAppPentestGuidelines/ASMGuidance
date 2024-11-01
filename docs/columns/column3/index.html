@@ -1,0 +1,57 @@
+<!doctype html><html lang=ja dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  本当にASMが必要ですか？
+  #
+
+課題/要件を洗い出す過程で気づかれたかもしれませんが、課題/要件によっては従来の管理施策の見直しや強化をするで十分に解決できることがあります。
+例えばASMで解決したい課題が、以下のような場合です。
+
+IT資産数が多く、台帳管理が難しい
+IT資産が各部門で独自に取得されており、管理・把握できていない
+IT資産数が多く、コスト的に脆弱性診断ができない
+
+上記についてASMツールを導入することで解決しようとすると、従来の管理施策（IT資産台帳と脆弱性診断）と比べて、優れている点と劣っている点があります。
+例えば、ASMツールが優れている点としては、一連のプロセスとして広範囲にIT資産を検出し、リスク評価まで行う点があります。
+劣っている点としては、ASMツールによるIT資産の検出には限界があることです。完全に網羅してIT資産を検出できるわけではないため、従来の管理施策と比べて、ASMツールでの検出結果は漏れが多い状態となり得ます。加えて、ASMツールは、誤検知（自組織とは関係ないIT資産）を含む多くの既知・未知のIT資産が発見されるため、運用するために、技術（結果の理解）、コミュニケーション（複数部門や外部機関との調整）が可能な人材をアサインし、運用体制を整える必要があります。未知の資産が発見された場合には、担当部門や担当者を見つける必要があるために従来の管理施策よりも工数やリソースを要することもあります。
+また、リスク評価についても、脆弱性診断より高い精度で脆弱性を検出できるわけでもありません。一部のASMツールでは高精度での脆弱性検出を謳っているがスキャン内容の攻撃性が高く、リスク評価前に調整が必要になるケースもあり、運用負荷が高まってしまうことが想定されます。
+そのため、既存の管理施策（従来の管理施策）に改善の余地があるならば、既存の管理施策を強化することも一つの選択肢として適切です。
+以下のような解決策が考えられます。
+
+  
+      
+          課題
+          解決策
+      
+  
+  
+      
+          IT資産数が多く、台帳管理が難しい
+          ASMではなく組織内部のシステム等から同様の情報取得を試みることが可能です。例えば、DNSが一元管理されており、情報に容易にアクセス可能であれば、IT資産の一覧を作成できます。
+      
+      
+          IT資産が各部門で独自に取得されており、管理・把握できていない
+          IT資産管理のガバナンスの見直し（フロー、ポリシーの再整備）により対応可能です。ASMを導入するとしても、無法地帯にならないように導入と並行して整備するべきです。
+      
+      
+          IT資産数が多く、コスト的に脆弱性診断ができない
+          ツールベースの診断を内製化して最低限でも脆弱性診断を実施する、CSPMなど脆弱性診断とは別の取り組みで設定やポリシーの不備を発見し安全性を保つなどの代替案も考えられます。
+      
+  
+
+上記はあくまで例ですが、組織で何が課題となっており、既存の管理施策ではなぜ解決できないのかを整理してみましょう。
+整理することで、阻害要因や制約事項が明確になるかもしれません。
+なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://webapppentestguidelines.github.io/asmguidance/docs/columns/column3/"><meta property="og:site_name" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:title" content="本当にASMが必要ですか？"><meta property="og:description" content="本当にASMが必要ですか？ # 課題/要件を洗い出す過程で気づかれたかもしれませんが、課題/要件によっては従来の管理施策の見直しや強化をするで十分に解決できることがあります。
+例えばASMで解決したい課題が、以下のような場合です。
+IT資産数が多く、台帳管理が難しい IT資産が各部門で独自に取得されており、管理・把握できていない IT資産数が多く、コスト的に脆弱性診断ができない 上記についてASMツールを導入することで解決しようとすると、従来の管理施策（IT資産台帳と脆弱性診断）と比べて、優れている点と劣っている点があります。
+例えば、ASMツールが優れている点としては、一連のプロセスとして広範囲にIT資産を検出し、リスク評価まで行う点があります。
+劣っている点としては、ASMツールによるIT資産の検出には限界があることです。完全に網羅してIT資産を検出できるわけではないため、従来の管理施策と比べて、ASMツールでの検出結果は漏れが多い状態となり得ます。加えて、ASMツールは、誤検知（自組織とは関係ないIT資産）を含む多くの既知・未知のIT資産が発見されるため、運用するために、技術（結果の理解）、コミュニケーション（複数部門や外部機関との調整）が可能な人材をアサインし、運用体制を整える必要があります。未知の資産が発見された場合には、担当部門や担当者を見つける必要があるために従来の管理施策よりも工数やリソースを要することもあります。
+また、リスク評価についても、脆弱性診断より高い精度で脆弱性を検出できるわけでもありません。一部のASMツールでは高精度での脆弱性検出を謳っているがスキャン内容の攻撃性が高く、リスク評価前に調整が必要になるケースもあり、運用負荷が高まってしまうことが想定されます。
+そのため、既存の管理施策（従来の管理施策）に改善の余地があるならば、既存の管理施策を強化することも一つの選択肢として適切です。 以下のような解決策が考えられます。
+課題 解決策 IT資産数が多く、台帳管理が難しい ASMではなく組織内部のシステム等から同様の情報取得を試みることが可能です。例えば、DNSが一元管理されており、情報に容易にアクセス可能であれば、IT資産の一覧を作成できます。 IT資産が各部門で独自に取得されており、管理・把握できていない IT資産管理のガバナンスの見直し（フロー、ポリシーの再整備）により対応可能です。ASMを導入するとしても、無法地帯にならないように導入と並行して整備するべきです。 IT資産数が多く、コスト的に脆弱性診断ができない ツールベースの診断を内製化して最低限でも脆弱性診断を実施する、CSPMなど脆弱性診断とは別の取り組みで設定やポリシーの不備を発見し安全性を保つなどの代替案も考えられます。 上記はあくまで例ですが、組織で何が課題となっており、既存の管理施策ではなぜ解決できないのかを整理してみましょう。
+整理することで、阻害要因や制約事項が明確になるかもしれません。
+なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。"><meta property="og:locale" content="ja"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-10-30T23:48:00+09:00"><title>本当にASMが必要ですか？ | ASM導入検討を進めるためのガイダンス（基礎編）</title>
+<link rel=icon href=/asmguidance/favicon.png><link rel=manifest href=/asmguidance/manifest.json><link rel=canonical href=https://webapppentestguidelines.github.io/asmguidance/docs/columns/column3/><link rel=stylesheet href=/asmguidance/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin=anonymous><script defer src=/asmguidance/fuse.min.js></script><script defer src=/asmguidance/ja.search.min.a835d73be33b627d77d94b6f3301d0d02c7fa0525ffcf0a86e6de0afb430c6e9.js integrity="sha256-qDXXO+M7Yn132UtvMwHQ0Cx/oFJf/PCobm3gr7Qwxuk=" crossorigin=anonymous></script><script defer src=/asmguidance/sw.min.5e35f1f7710314cf82e98faf4e6f027c65da1340d2d852b64854b8a29634e510.js integrity="sha256-XjXx93EDFM+C6Y+vTm8CfGXaE0DS2FK2SFS4opY05RA=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/asmguidance/><span>ASM導入検討を進めるためのガイダンス（基礎編）</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=検索 aria-label=検索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><span>第1章 はじめに</span><ul><li><a href=/asmguidance/docs/chapter1/section1/>1.1 ASM（Attack Surface Management）の必要性</a></li><li><a href=/asmguidance/docs/chapter1/section2/>1.2 本ドキュメントの構成と読み進めるための補足</a></li></ul></li><li><a href=/asmguidance/docs/chapter2/>第2章 Attack Surface Management（ASM）とは何か</a><ul><li><a href=/asmguidance/docs/chapter2/section1/>2.1 ASMとは</a></li><li><a href=/asmguidance/docs/chapter2/section2/>2.2 ASMのプロセス</a></li><li><a href=/asmguidance/docs/chapter2/section3/>2.3 ASMや同カテゴリに類されることが多いツールやサービス</a></li></ul></li><li><span>第3章 ASM導入が必要であるかの判断（ASMの要件定義）</span><ul><li><a href=/asmguidance/docs/chapter3/section1/>3.1 課題の把握</a></li><li><a href=/asmguidance/docs/chapter3/section2/>3.2 課題解決のための要件定義</a></li></ul></li><li><a href=/asmguidance/docs/chapter4/>第4章 ASMツール/サービスの選定</a><ul><li><a href=/asmguidance/docs/chapter4/section1/>4.1 ASMツールに求める機能</a></li><li><a href=/asmguidance/docs/chapter4/section2/>4.2 ASMツールの注意点</a></li></ul></li><li><span>第5章 ASMの運用体制の構築</span><ul><li><a href=/asmguidance/docs/chapter5/section1/>5.1 現状のIT資産の特定と評価</a></li><li><a href=/asmguidance/docs/chapter5/section2/>5.2 主管の決定・運用リソースの確保</a></li><li><a href=/asmguidance/docs/chapter5/section3/>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</a></li></ul></li><li><a href=/asmguidance/docs/chapter6/>第6章　ASM活用事例</a><ul></ul></li><li><a href=/asmguidance/docs/columns/>コラム</a><ul><li><a href=/asmguidance/docs/columns/column1/>ASMツールは脆弱性診断の代わりになる？</a></li><li><a href=/asmguidance/docs/columns/column2/>ASMツールとASMサービスの違い</a></li><li><a href=/asmguidance/docs/columns/column3/ class=active>本当にASMが必要ですか？</a></li><li><a href=/asmguidance/docs/columns/column4/>ASM導入後に確認したいポイント</a></li><li><a href=/asmguidance/docs/columns/column5/>ASMツールの拡張機能と付加価値</a></li></ul></li><li><a href=/asmguidance/docs/references/>参考資料</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/asmguidance/svg/menu.svg class=book-icon alt=Menu></label><h3>本当にASMが必要ですか？</h3><label for=toc-control></label></div></header><article class="markdown book-article"><h1 id=本当にasmが必要ですか>本当にASMが必要ですか？
+<a class=anchor href=#%e6%9c%ac%e5%bd%93%e3%81%abasm%e3%81%8c%e5%bf%85%e8%a6%81%e3%81%a7%e3%81%99%e3%81%8b>#</a></h1><p>課題/要件を洗い出す過程で気づかれたかもしれませんが、課題/要件によっては従来の管理施策の見直しや強化をするで十分に解決できることがあります。</p><p>例えばASMで解決したい課題が、以下のような場合です。</p><ul><li>IT資産数が多く、台帳管理が難しい</li><li>IT資産が各部門で独自に取得されており、管理・把握できていない</li><li>IT資産数が多く、コスト的に脆弱性診断ができない</li></ul><p>上記についてASMツールを導入することで解決しようとすると、従来の管理施策（IT資産台帳と脆弱性診断）と比べて、優れている点と劣っている点があります。</p><p>例えば、ASMツールが優れている点としては、一連のプロセスとして広範囲にIT資産を検出し、リスク評価まで行う点があります。</p><p>劣っている点としては、ASMツールによるIT資産の検出には限界があることです。完全に網羅してIT資産を検出できるわけではないため、従来の管理施策と比べて、ASMツールでの検出結果は漏れが多い状態となり得ます。加えて、ASMツールは、誤検知（自組織とは関係ないIT資産）を含む多くの既知・未知のIT資産が発見されるため、運用するために、技術（結果の理解）、コミュニケーション（複数部門や外部機関との調整）が可能な人材をアサインし、運用体制を整える必要があります。未知の資産が発見された場合には、担当部門や担当者を見つける必要があるために従来の管理施策よりも工数やリソースを要することもあります。</p><p>また、リスク評価についても、脆弱性診断より高い精度で脆弱性を検出できるわけでもありません。一部のASMツールでは高精度での脆弱性検出を謳っているがスキャン内容の攻撃性が高く、リスク評価前に調整が必要になるケースもあり、運用負荷が高まってしまうことが想定されます。</p><p>そのため、既存の管理施策（従来の管理施策）に改善の余地があるならば、既存の管理施策を強化することも一つの選択肢として適切です。
+以下のような解決策が考えられます。</p><table><thead><tr><th>課題</th><th>解決策</th></tr></thead><tbody><tr><td>IT資産数が多く、台帳管理が難しい</td><td>ASMではなく組織内部のシステム等から同様の情報取得を試みることが可能です。例えば、DNSが一元管理されており、情報に容易にアクセス可能であれば、IT資産の一覧を作成できます。</td></tr><tr><td>IT資産が各部門で独自に取得されており、管理・把握できていない</td><td>IT資産管理のガバナンスの見直し（フロー、ポリシーの再整備）により対応可能です。ASMを導入するとしても、無法地帯にならないように導入と並行して整備するべきです。</td></tr><tr><td>IT資産数が多く、コスト的に脆弱性診断ができない</td><td>ツールベースの診断を内製化して最低限でも脆弱性診断を実施する、CSPMなど脆弱性診断とは別の取り組みで設定やポリシーの不備を発見し安全性を保つなどの代替案も考えられます。</td></tr></tbody></table><p>上記はあくまで例ですが、組織で何が課題となっており、既存の管理施策ではなぜ解決できないのかを整理してみましょう。<br>整理することで、阻害要因や制約事項が明確になるかもしれません。</p><p>なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/commit/a0be0b86d91221c9c48c352fbc269238ff1b2c51 title='最終更新者 wild0ni0n | 2024年10月30日' target=_blank rel=noopener><img src=/asmguidance/svg/calendar.svg class=book-icon alt>
+<span>2024年10月30日</span></a></div><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/edit/main/content/docs/columns/column3.md target=_blank rel=noopener><img src=/asmguidance/svg/edit.svg class=book-icon alt>
+<span>このページを編集する</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

@@ -1,0 +1,79 @@
+<!doctype html><html lang=ja dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  5.1 現状のIT資産の特定と評価
+  #
+
+ASM導入までの準備として、現状把握しているIT資産を特定し、管理策を決定しておく必要があります。また、管理対象とするIT資産やその範囲を決めておくことも重要です。
+守るべき資産やその範囲、管理方針（管理プロセス）などを決定しておくことで、ASM導入後に発見されたIT資産を管理プロセスに合流させることができます。（そもそも守るべき資産や管理策が定まっていないと、ASMに取り組んでも管理者を特定できずに放置されてしまう可能性があります。）
+ASMに取り組む前の自組織の資産の特定は、以下のプロセスで行うことを推奨します。
+※ASMのプロセスは2.2節で紹介しています。
+
+
+
+
+  
+
+
+
+
+
+flowchart LR
+    A[資産の洗い出し] 
+    B[資産の分類と評価]
+    C[管理策/役割の設定]
+    A --> B --> C --> |可能なら|D(リスクの設定)
+
+
+組織がISMS(ISO27001)認証を受けている場合には、IT資産を管理している台帳を採用することも効果的です。
+
+  ASMから始めるのも手段の１つ
+  #
+
+管理台帳が存在せず、イチから資産の特定を行うことが難しい場合には、4章で紹介されているASMツール/サービスを使用して、ひとまずアタックサーフェスの調査から行い、その結果から管理台帳を作成することを推奨します。
+ただし、ASMツールを使用したアタックサーフェスの調査では、IPやドメインが調査のメインターゲットとなり、外部調査からでは特定しづらいVPN機器や特定の地域からのアクセス制限をしているサーバーが発見できないこともあるため注意が必要です。
+また、発見されたIT資産の管理者情報が、ほとんど無い状態だと想定されるため、結果の取り扱い方法を予め想定しておくことや主管を決めておくことが重要です。
+
+  ASMによって発見される問題への備え
+  #
+
+管理台帳がある状態でASMに取り組む場合、把握していなかったIT資産（未知のIT資産）の発見や、脆弱なIT資産の発見に繋がります。そのため、ASMによって発見される以下のような資産をどのように管理するかがポイントです。
+
+  未知のIT資産
+  #
+
+ASMへの取り組み時には、把握していなかったIT資産（責任者が分からないIT資産）が見つかる可能性もあります。それらを管理するためのプロセスが必要になることも視野にいれておきましょう。
+ASM導入前の準備として、ASMで発見された未知のIT資産の管理者を特定できるように準備しておく必要があります。よく検出される対象には、公開Webサーバーはもちろんのこと、従業員によって組織のネットワークに接続されたものの、管理が忘れ去られているシャドーITなどがあります。4.1節では、発見できるIT資産の例も紹介しているため、そちらも参考にしてみてください。
+
+  脆弱なIT資産
+  #
+
+資産の分類と評価を進めていく過程で設定の不備があるシステムや脆弱性情報が公開されているサーバーの存在が明らかになる場合もあります。脆弱性対応では対応コストが必要になるため、運用リソースの確保が必要になることを考慮しておきましょう。
+上記のようなIT資産が発見された場合に、組織内で管理者（担当者）が分からず手がつけられない。といったことがないように、誰が発見されたIT資産の管理者探しをするのか等も役割を定めておきましょう。管理プロセスの詳細については後述の5.3節を参照してください。
+また、ASMで得られた結果を自組織のIT資産管理のプロセスに合流させ、継続して管理・評価に取り組むことも重要です。"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section1/"><meta property="og:site_name" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:title" content="5.1 現状のIT資産の特定と評価"><meta property="og:description" content="5.1 現状のIT資産の特定と評価 # ASM導入までの準備として、現状把握しているIT資産を特定し、管理策を決定しておく必要があります。また、管理対象とするIT資産やその範囲を決めておくことも重要です。 守るべき資産やその範囲、管理方針（管理プロセス）などを決定しておくことで、ASM導入後に発見されたIT資産を管理プロセスに合流させることができます。（そもそも守るべき資産や管理策が定まっていないと、ASMに取り組んでも管理者を特定できずに放置されてしまう可能性があります。）
+ASMに取り組む前の自組織の資産の特定は、以下のプロセスで行うことを推奨します。 ※ASMのプロセスは2.2節で紹介しています。
+flowchart LR A[資産の洗い出し] B[資産の分類と評価] C[管理策/役割の設定] A --> B --> C --> |可能なら|D(リスクの設定) 組織がISMS(ISO27001)認証を受けている場合には、IT資産を管理している台帳を採用することも効果的です。
+ASMから始めるのも手段の１つ # 管理台帳が存在せず、イチから資産の特定を行うことが難しい場合には、4章で紹介されているASMツール/サービスを使用して、ひとまずアタックサーフェスの調査から行い、その結果から管理台帳を作成することを推奨します。
+ただし、ASMツールを使用したアタックサーフェスの調査では、IPやドメインが調査のメインターゲットとなり、外部調査からでは特定しづらいVPN機器や特定の地域からのアクセス制限をしているサーバーが発見できないこともあるため注意が必要です。
+また、発見されたIT資産の管理者情報が、ほとんど無い状態だと想定されるため、結果の取り扱い方法を予め想定しておくことや主管を決めておくことが重要です。
+ASMによって発見される問題への備え # 管理台帳がある状態でASMに取り組む場合、把握していなかったIT資産（未知のIT資産）の発見や、脆弱なIT資産の発見に繋がります。そのため、ASMによって発見される以下のような資産をどのように管理するかがポイントです。
+未知のIT資産 # ASMへの取り組み時には、把握していなかったIT資産（責任者が分からないIT資産）が見つかる可能性もあります。それらを管理するためのプロセスが必要になることも視野にいれておきましょう。
+ASM導入前の準備として、ASMで発見された未知のIT資産の管理者を特定できるように準備しておく必要があります。よく検出される対象には、公開Webサーバーはもちろんのこと、従業員によって組織のネットワークに接続されたものの、管理が忘れ去られているシャドーITなどがあります。4.1節では、発見できるIT資産の例も紹介しているため、そちらも参考にしてみてください。
+脆弱なIT資産 # 資産の分類と評価を進めていく過程で設定の不備があるシステムや脆弱性情報が公開されているサーバーの存在が明らかになる場合もあります。脆弱性対応では対応コストが必要になるため、運用リソースの確保が必要になることを考慮しておきましょう。
+上記のようなIT資産が発見された場合に、組織内で管理者（担当者）が分からず手がつけられない。といったことがないように、誰が発見されたIT資産の管理者探しをするのか等も役割を定めておきましょう。管理プロセスの詳細については後述の5.3節を参照してください。 また、ASMで得られた結果を自組織のIT資産管理のプロセスに合流させ、継続して管理・評価に取り組むことも重要です。"><meta property="og:locale" content="ja"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-10-30T23:48:00+09:00"><title>5.1 現状のIT資産の特定と評価 | ASM導入検討を進めるためのガイダンス（基礎編）</title>
+<link rel=icon href=/asmguidance/favicon.png><link rel=manifest href=/asmguidance/manifest.json><link rel=canonical href=https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section1/><link rel=stylesheet href=/asmguidance/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin=anonymous><script defer src=/asmguidance/fuse.min.js></script><script defer src=/asmguidance/ja.search.min.a835d73be33b627d77d94b6f3301d0d02c7fa0525ffcf0a86e6de0afb430c6e9.js integrity="sha256-qDXXO+M7Yn132UtvMwHQ0Cx/oFJf/PCobm3gr7Qwxuk=" crossorigin=anonymous></script><script defer src=/asmguidance/sw.min.5e35f1f7710314cf82e98faf4e6f027c65da1340d2d852b64854b8a29634e510.js integrity="sha256-XjXx93EDFM+C6Y+vTm8CfGXaE0DS2FK2SFS4opY05RA=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/asmguidance/><span>ASM導入検討を進めるためのガイダンス（基礎編）</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=検索 aria-label=検索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><span>第1章 はじめに</span><ul><li><a href=/asmguidance/docs/chapter1/section1/>1.1 ASM（Attack Surface Management）の必要性</a></li><li><a href=/asmguidance/docs/chapter1/section2/>1.2 本ドキュメントの構成と読み進めるための補足</a></li></ul></li><li><a href=/asmguidance/docs/chapter2/>第2章 Attack Surface Management（ASM）とは何か</a><ul><li><a href=/asmguidance/docs/chapter2/section1/>2.1 ASMとは</a></li><li><a href=/asmguidance/docs/chapter2/section2/>2.2 ASMのプロセス</a></li><li><a href=/asmguidance/docs/chapter2/section3/>2.3 ASMや同カテゴリに類されることが多いツールやサービス</a></li></ul></li><li><span>第3章 ASM導入が必要であるかの判断（ASMの要件定義）</span><ul><li><a href=/asmguidance/docs/chapter3/section1/>3.1 課題の把握</a></li><li><a href=/asmguidance/docs/chapter3/section2/>3.2 課題解決のための要件定義</a></li></ul></li><li><a href=/asmguidance/docs/chapter4/>第4章 ASMツール/サービスの選定</a><ul><li><a href=/asmguidance/docs/chapter4/section1/>4.1 ASMツールに求める機能</a></li><li><a href=/asmguidance/docs/chapter4/section2/>4.2 ASMツールの注意点</a></li></ul></li><li><span>第5章 ASMの運用体制の構築</span><ul><li><a href=/asmguidance/docs/chapter5/section1/ class=active>5.1 現状のIT資産の特定と評価</a></li><li><a href=/asmguidance/docs/chapter5/section2/>5.2 主管の決定・運用リソースの確保</a></li><li><a href=/asmguidance/docs/chapter5/section3/>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</a></li></ul></li><li><a href=/asmguidance/docs/chapter6/>第6章　ASM活用事例</a><ul></ul></li><li><a href=/asmguidance/docs/columns/>コラム</a><ul><li><a href=/asmguidance/docs/columns/column1/>ASMツールは脆弱性診断の代わりになる？</a></li><li><a href=/asmguidance/docs/columns/column2/>ASMツールとASMサービスの違い</a></li><li><a href=/asmguidance/docs/columns/column3/>本当にASMが必要ですか？</a></li><li><a href=/asmguidance/docs/columns/column4/>ASM導入後に確認したいポイント</a></li><li><a href=/asmguidance/docs/columns/column5/>ASMツールの拡張機能と付加価値</a></li></ul></li><li><a href=/asmguidance/docs/references/>参考資料</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/asmguidance/svg/menu.svg class=book-icon alt=Menu></label><h3>5.1 現状のIT資産の特定と評価</h3><label for=toc-control></label></div></header><article class="markdown book-article"><h1 id=51-現状のit資産の特定と評価>5.1 現状のIT資産の特定と評価
+<a class=anchor href=#51-%e7%8f%be%e7%8a%b6%e3%81%aeit%e8%b3%87%e7%94%a3%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%a8%e8%a9%95%e4%be%a1>#</a></h1><p>ASM導入までの準備として、現状把握しているIT資産を特定し、管理策を決定しておく必要があります。また、管理対象とするIT資産やその範囲を決めておくことも重要です。
+守るべき資産やその範囲、管理方針（管理プロセス）などを決定しておくことで、ASM導入後に発見されたIT資産を管理プロセスに合流させることができます。（そもそも守るべき資産や管理策が定まっていないと、ASMに取り組んでも管理者を特定できずに放置されてしまう可能性があります。）</p><p>ASMに取り組む前の自組織の資産の特定は、以下のプロセスで行うことを推奨します。
+※ASMのプロセスは2.2節で紹介しています。</p><script src=/asmguidance/mermaid.min.js></script><script>mermaid.initialize({flowchart:{useMaxWidth:!0},theme:"default"})</script><pre class=mermaid>
+flowchart LR
+    A[資産の洗い出し] 
+    B[資産の分類と評価]
+    C[管理策/役割の設定]
+    A --> B --> C --> |可能なら|D(リスクの設定)
+</pre><p>組織がISMS(ISO27001)認証を受けている場合には、IT資産を管理している台帳を採用することも効果的です。</p><h3 id=asmから始めるのも手段の１つ>ASMから始めるのも手段の１つ
+<a class=anchor href=#asm%e3%81%8b%e3%82%89%e5%a7%8b%e3%82%81%e3%82%8b%e3%81%ae%e3%82%82%e6%89%8b%e6%ae%b5%e3%81%ae%ef%bc%91%e3%81%a4>#</a></h3><p>管理台帳が存在せず、イチから資産の特定を行うことが難しい場合には、4章で紹介されているASMツール/サービスを使用して、ひとまずアタックサーフェスの調査から行い、その結果から管理台帳を作成することを推奨します。<br>ただし、ASMツールを使用したアタックサーフェスの調査では、IPやドメインが調査のメインターゲットとなり、外部調査からでは特定しづらいVPN機器や特定の地域からのアクセス制限をしているサーバーが発見できないこともあるため注意が必要です。<br>また、発見されたIT資産の管理者情報が、ほとんど無い状態だと想定されるため、結果の取り扱い方法を予め想定しておくことや主管を決めておくことが重要です。</p><h2 id=asmによって発見される問題への備え>ASMによって発見される問題への備え
+<a class=anchor href=#asm%e3%81%ab%e3%82%88%e3%81%a3%e3%81%a6%e7%99%ba%e8%a6%8b%e3%81%95%e3%82%8c%e3%82%8b%e5%95%8f%e9%a1%8c%e3%81%b8%e3%81%ae%e5%82%99%e3%81%88>#</a></h2><p>管理台帳がある状態でASMに取り組む場合、把握していなかったIT資産（未知のIT資産）の発見や、脆弱なIT資産の発見に繋がります。そのため、ASMによって発見される以下のような資産をどのように管理するかがポイントです。</p><h3 id=未知のit資産>未知のIT資産
+<a class=anchor href=#%e6%9c%aa%e7%9f%a5%e3%81%aeit%e8%b3%87%e7%94%a3>#</a></h3><p>ASMへの取り組み時には、把握していなかったIT資産（責任者が分からないIT資産）が見つかる可能性もあります。それらを管理するためのプロセスが必要になることも視野にいれておきましょう。<br>ASM導入前の準備として、ASMで発見された未知のIT資産の管理者を特定できるように準備しておく必要があります。よく検出される対象には、公開Webサーバーはもちろんのこと、従業員によって組織のネットワークに接続されたものの、管理が忘れ去られているシャドーITなどがあります。4.1節では、発見できるIT資産の例も紹介しているため、そちらも参考にしてみてください。</p><h3 id=脆弱なit資産>脆弱なIT資産
+<a class=anchor href=#%e8%84%86%e5%bc%b1%e3%81%aait%e8%b3%87%e7%94%a3>#</a></h3><p>資産の分類と評価を進めていく過程で設定の不備があるシステムや脆弱性情報が公開されているサーバーの存在が明らかになる場合もあります。脆弱性対応では対応コストが必要になるため、運用リソースの確保が必要になることを考慮しておきましょう。</p><p>上記のようなIT資産が発見された場合に、組織内で管理者（担当者）が分からず手がつけられない。といったことがないように、誰が発見されたIT資産の管理者探しをするのか等も役割を定めておきましょう。管理プロセスの詳細については後述の5.3節を参照してください。
+また、ASMで得られた結果を自組織のIT資産管理のプロセスに合流させ、継続して管理・評価に取り組むことも重要です。</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/commit/a0be0b86d91221c9c48c352fbc269238ff1b2c51 title='最終更新者 wild0ni0n | 2024年10月30日' target=_blank rel=noopener><img src=/asmguidance/svg/calendar.svg class=book-icon alt>
+<span>2024年10月30日</span></a></div><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/edit/main/content/docs/chapter5/section1.md target=_blank rel=noopener><img src=/asmguidance/svg/edit.svg class=book-icon alt>
+<span>このページを編集する</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>
