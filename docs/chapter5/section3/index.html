@@ -1,67 +1,4 @@
-<!doctype html><html lang=ja dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
-  5.3 発見したIT資産・脆弱性情報への対応プロセスの検討
-  #
-
-ここでは、ASMによって発見されたIT資産・脆弱性情報への対応プロセスにおいて、想定される対応内容や事前に検討しておくべきポイントについて記載します。
-
-  発見されたIT資産に対する対応プロセスについて
-  #
-
-ASMを運用していく中で、当然いままで把握していなかった新たなIT資産を発見する可能性があります。ただし、ASMツールが発見したIT資産の中には誤情報が含まれている可能性があります。そのため、新たに発見した資産が、自組織もしくはスコープ内の関連会社などと本当に関係しているものであるか、確認を行う必要があります。
-本対応プロセスについては、以下のような点を事前に検討しておく必要があります。
-
-  関係ない資産情報の除外
-  #
-
-例えば明らかに自組織と関係ない情報などは他部門に確認を依頼する前に、運用側で除外しておく必要があります。そのため、そのような情報を除外するために確認が必要な項目や行う確認作業の内容について取り決めておくべきです。
-
-  確認を依頼する部門ごとの連絡先や依頼する情報について
-  #
-
-新たに発見した資産の管理者や詳細を把握するためには、会社の他部門に確認を依頼する必要があります。企業規模が大きかったり、複数の拠点が存在する会社などでは、このプロセスにおいて情報を把握するまでに苦労する可能性があります。そのため、他部門への連絡窓口・依頼内容・要求する情報などについて事前に検討しておくべきです。また、対応を円滑に進めるためにも本プロセスにおける関係者に対して、あらかじめASMの運用について事前に説明を行い上手く連携できるように備えることを推奨します。
-
-  発見された脆弱性に対する対応プロセスについて
-  #
-
-ASMを運用していく中で、保有するIT資産の脆弱性が発見される可能性があります。IT資産と同様にこの脆弱性情報についても誤情報が含まれている可能性があるため精査が必要です。また、実際に脆弱性が存在した場合には、資産を保有する部門への対応依頼の連絡や対応状況を追跡していく必要があります。
-本対応プロセスについては、以下のような点を事前に検討しておく必要があります。
-
-  明らかな誤検知の除外
-  #
-
-明らかに誤検知と判定できる脆弱性情報については、確認・対応を依頼する前に除外する必要があります。担当部門に確認を依頼する前に、運用側で最低限確認が必要な項目や行う確認作業の内容について取り決めておきましょう。
-
-  対応優先度について
-  #
-
-検出した脆弱性の内容や資産の重要度などに応じて、脆弱性への対応優先度は異なります。そのため、対応優先度や対応期限などのルールについてあらかじめ定義しておく必要があります。社内ですでに脆弱性への対応ルールが存在している場合には、その内容を踏襲するべきでしょう。
-攻撃者の目的は多岐に渡りますが、多くの場合は内部ネットワークに侵入することを最初のステップにしています。ASMの目的のひとつは外部と内部を繋ぐ箇所の弱点をあらかじめ可視化することにより、攻撃者から見える弱点を防ぐ機会を作ることです。すなわち脆弱性の対応優先度についても外部からの攻撃のしやすさという観点が盛り込まれていることが望ましいと言えます。
-
-  確認・対応の依頼について
-  #
-
-IT資産の管理者に対して発見した脆弱性に対する対応を依頼します。脆弱性の存在が確実である場合には修正対応を依頼し、可能性である場合には該当の脆弱性が実際に存在するかの確認を依頼する必要があります。本プロセスにおける依頼内容や要求する情報などについて事前に検討しておきましょう。
-
-  脆弱性対応の追跡について
-  #
-
-確認・対応の依頼を行った結果、発見された脆弱性がどのようなステータスとなっているかを管理・追跡していく必要があります。例えば、修正対応を依頼したにも関わらず、対応期日までに脆弱性の修正が確認できていない場合などには、状況について確認する必要があるでしょう。
-本プロセスにおける管理の方法・必要となる情報・対応内容などについて事前に検討しておきましょう。
-なお、本プロセスにおける脆弱性対応の優先付けや取り組み方については「脆弱性診断士スキルマッププロジェクト」より公開している以下のドキュメントが参考となります。
-脆弱性トリアージガイドライン作成の手引き"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section3/"><meta property="og:site_name" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:title" content="5.3 発見したIT資産・脆弱性情報への対応プロセスの検討"><meta property="og:description" content="5.3 発見したIT資産・脆弱性情報への対応プロセスの検討 # ここでは、ASMによって発見されたIT資産・脆弱性情報への対応プロセスにおいて、想定される対応内容や事前に検討しておくべきポイントについて記載します。
-発見されたIT資産に対する対応プロセスについて # ASMを運用していく中で、当然いままで把握していなかった新たなIT資産を発見する可能性があります。ただし、ASMツールが発見したIT資産の中には誤情報が含まれている可能性があります。そのため、新たに発見した資産が、自組織もしくはスコープ内の関連会社などと本当に関係しているものであるか、確認を行う必要があります。
-本対応プロセスについては、以下のような点を事前に検討しておく必要があります。
-関係ない資産情報の除外 # 例えば明らかに自組織と関係ない情報などは他部門に確認を依頼する前に、運用側で除外しておく必要があります。そのため、そのような情報を除外するために確認が必要な項目や行う確認作業の内容について取り決めておくべきです。
-確認を依頼する部門ごとの連絡先や依頼する情報について # 新たに発見した資産の管理者や詳細を把握するためには、会社の他部門に確認を依頼する必要があります。企業規模が大きかったり、複数の拠点が存在する会社などでは、このプロセスにおいて情報を把握するまでに苦労する可能性があります。そのため、他部門への連絡窓口・依頼内容・要求する情報などについて事前に検討しておくべきです。また、対応を円滑に進めるためにも本プロセスにおける関係者に対して、あらかじめASMの運用について事前に説明を行い上手く連携できるように備えることを推奨します。
-発見された脆弱性に対する対応プロセスについて # ASMを運用していく中で、保有するIT資産の脆弱性が発見される可能性があります。IT資産と同様にこの脆弱性情報についても誤情報が含まれている可能性があるため精査が必要です。また、実際に脆弱性が存在した場合には、資産を保有する部門への対応依頼の連絡や対応状況を追跡していく必要があります。
-本対応プロセスについては、以下のような点を事前に検討しておく必要があります。
-明らかな誤検知の除外 # 明らかに誤検知と判定できる脆弱性情報については、確認・対応を依頼する前に除外する必要があります。担当部門に確認を依頼する前に、運用側で最低限確認が必要な項目や行う確認作業の内容について取り決めておきましょう。
-対応優先度について # 検出した脆弱性の内容や資産の重要度などに応じて、脆弱性への対応優先度は異なります。そのため、対応優先度や対応期限などのルールについてあらかじめ定義しておく必要があります。社内ですでに脆弱性への対応ルールが存在している場合には、その内容を踏襲するべきでしょう。
-攻撃者の目的は多岐に渡りますが、多くの場合は内部ネットワークに侵入することを最初のステップにしています。ASMの目的のひとつは外部と内部を繋ぐ箇所の弱点をあらかじめ可視化することにより、攻撃者から見える弱点を防ぐ機会を作ることです。すなわち脆弱性の対応優先度についても外部からの攻撃のしやすさという観点が盛り込まれていることが望ましいと言えます。
-確認・対応の依頼について # IT資産の管理者に対して発見した脆弱性に対する対応を依頼します。脆弱性の存在が確実である場合には修正対応を依頼し、可能性である場合には該当の脆弱性が実際に存在するかの確認を依頼する必要があります。本プロセスにおける依頼内容や要求する情報などについて事前に検討しておきましょう。
-脆弱性対応の追跡について # 確認・対応の依頼を行った結果、発見された脆弱性がどのようなステータスとなっているかを管理・追跡していく必要があります。例えば、修正対応を依頼したにも関わらず、対応期日までに脆弱性の修正が確認できていない場合などには、状況について確認する必要があるでしょう。 本プロセスにおける管理の方法・必要となる情報・対応内容などについて事前に検討しておきましょう。
-なお、本プロセスにおける脆弱性対応の優先付けや取り組み方については「脆弱性診断士スキルマッププロジェクト」より公開している以下のドキュメントが参考となります。
-脆弱性トリアージガイドライン作成の手引き"><meta property="og:locale" content="ja"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-11-01T17:25:34+09:00"><title>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討 | ASM導入検討を進めるためのガイダンス（基礎編）</title>
+<!doctype html><html lang=ja dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section3/"><meta property="og:site_name" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:title" content="5.3 発見したIT資産・脆弱性情報への対応プロセスの検討"><meta property="og:description" content="ASM導入検討を進めるためのガイダンス（基礎編）"><meta property="og:locale" content="ja"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-11-01T18:17:29+09:00"><title>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討 | ASM導入検討を進めるためのガイダンス（基礎編）</title>
 <link rel=icon href=/ASMGuidance/favicon.png><link rel=manifest href=/ASMGuidance/manifest.json><link rel=canonical href=https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section3/><link rel=stylesheet href=/ASMGuidance/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin=anonymous><script defer src=/ASMGuidance/fuse.min.js></script><script defer src=/ASMGuidance/ja.search.min.fc7338986c0edb42e14c13a866093056e2784d7958c55d86ff123ee2de1337fc.js integrity="sha256-/HM4mGwO20LhTBOoZgkwVuJ4TXlYxV2G/xI+4t4TN/w=" crossorigin=anonymous></script><script defer src=/ASMGuidance/sw.min.27607cc33cec7cbffaeeecc7f46fc94e85f7746a08a997f339b4131bb379aec5.js integrity="sha256-J2B8wzzsfL/67uzH9G/JToX3dGoIqZfzObQTG7N5rsU=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/ASMGuidance/><span>ASM導入検討を進めるためのガイダンス（基礎編）</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=検索 aria-label=検索 maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><span>第1章 はじめに</span><ul><li><a href=/ASMGuidance/docs/chapter1/section1/>1.1 ASM（Attack Surface Management）の必要性</a></li><li><a href=/ASMGuidance/docs/chapter1/section2/>1.2 本ドキュメントの構成と読み進めるための補足</a></li></ul></li><li><a href=/ASMGuidance/docs/chapter2/>第2章 Attack Surface Management（ASM）とは何か</a><ul><li><a href=/ASMGuidance/docs/chapter2/section1/>2.1 ASMとは</a></li><li><a href=/ASMGuidance/docs/chapter2/section2/>2.2 ASMのプロセス</a></li><li><a href=/ASMGuidance/docs/chapter2/section3/>2.3 ASMや同カテゴリに類されることが多いツールやサービス</a></li></ul></li><li><span>第3章 ASM導入が必要であるかの判断（ASMの要件定義）</span><ul><li><a href=/ASMGuidance/docs/chapter3/section1/>3.1 課題の把握</a></li><li><a href=/ASMGuidance/docs/chapter3/section2/>3.2 課題解決のための要件定義</a></li></ul></li><li><a href=/ASMGuidance/docs/chapter4/>第4章 ASMツール/サービスの選定</a><ul><li><a href=/ASMGuidance/docs/chapter4/section1/>4.1 ASMツールに求める機能</a></li><li><a href=/ASMGuidance/docs/chapter4/section2/>4.2 ASMツールの注意点</a></li></ul></li><li><span>第5章 ASMの運用体制の構築</span><ul><li><a href=/ASMGuidance/docs/chapter5/section1/>5.1 現状のIT資産の特定と評価</a></li><li><a href=/ASMGuidance/docs/chapter5/section2/>5.2 主管の決定・運用リソースの確保</a></li><li><a href=/ASMGuidance/docs/chapter5/section3/ class=active>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</a></li></ul></li><li><a href=/ASMGuidance/docs/chapter6/>第6章　ASM活用事例</a><ul></ul></li><li><a href=/ASMGuidance/docs/columns/>コラム</a><ul><li><a href=/ASMGuidance/docs/columns/column1/>ASMツールは脆弱性診断の代わりになる？</a></li><li><a href=/ASMGuidance/docs/columns/column2/>ASMツールとASMサービスの違い</a></li><li><a href=/ASMGuidance/docs/columns/column3/>本当にASMが必要ですか？</a></li><li><a href=/ASMGuidance/docs/columns/column4/>ASM導入後に確認したいポイント</a></li><li><a href=/ASMGuidance/docs/columns/column5/>ASMツールの拡張機能と付加価値</a></li></ul></li><li><a href=/ASMGuidance/docs/references/>参考資料</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/ASMGuidance/svg/menu.svg class=book-icon alt=Menu></label><h3>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</h3><label for=toc-control></label></div></header><article class="markdown book-article"><h1 id=53-発見したit資産脆弱性情報への対応プロセスの検討>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討
 <a class=anchor href=#53-%e7%99%ba%e8%a6%8b%e3%81%97%e3%81%9fit%e8%b3%87%e7%94%a3%e8%84%86%e5%bc%b1%e6%80%a7%e6%83%85%e5%a0%b1%e3%81%b8%e3%81%ae%e5%af%be%e5%bf%9c%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%81%ae%e6%a4%9c%e8%a8%8e>#</a></h1><p>ここでは、ASMによって発見されたIT資産・脆弱性情報への対応プロセスにおいて、想定される対応内容や事前に検討しておくべきポイントについて記載します。</p><h2 id=発見されたit資産に対する対応プロセスについて>発見されたIT資産に対する対応プロセスについて
@@ -73,6 +10,6 @@ IT資産の管理者に対して発見した脆弱性に対する対応を依頼
 <a class=anchor href=#%e5%af%be%e5%bf%9c%e5%84%aa%e5%85%88%e5%ba%a6%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a></h3><p>検出した脆弱性の内容や資産の重要度などに応じて、脆弱性への対応優先度は異なります。そのため、対応優先度や対応期限などのルールについてあらかじめ定義しておく必要があります。社内ですでに脆弱性への対応ルールが存在している場合には、その内容を踏襲するべきでしょう。<br>攻撃者の目的は多岐に渡りますが、多くの場合は内部ネットワークに侵入することを最初のステップにしています。ASMの目的のひとつは外部と内部を繋ぐ箇所の弱点をあらかじめ可視化することにより、攻撃者から見える弱点を防ぐ機会を作ることです。すなわち脆弱性の対応優先度についても外部からの攻撃のしやすさという観点が盛り込まれていることが望ましいと言えます。</p><h3 id=確認対応の依頼について>確認・対応の依頼について
 <a class=anchor href=#%e7%a2%ba%e8%aa%8d%e5%af%be%e5%bf%9c%e3%81%ae%e4%be%9d%e9%a0%bc%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a></h3><p>IT資産の管理者に対して発見した脆弱性に対する対応を依頼します。脆弱性の存在が確実である場合には修正対応を依頼し、可能性である場合には該当の脆弱性が実際に存在するかの確認を依頼する必要があります。本プロセスにおける依頼内容や要求する情報などについて事前に検討しておきましょう。</p><h3 id=脆弱性対応の追跡について>脆弱性対応の追跡について
 <a class=anchor href=#%e8%84%86%e5%bc%b1%e6%80%a7%e5%af%be%e5%bf%9c%e3%81%ae%e8%bf%bd%e8%b7%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a></h3><p>確認・対応の依頼を行った結果、発見された脆弱性がどのようなステータスとなっているかを管理・追跡していく必要があります。例えば、修正対応を依頼したにも関わらず、対応期日までに脆弱性の修正が確認できていない場合などには、状況について確認する必要があるでしょう。
-本プロセスにおける管理の方法・必要となる情報・対応内容などについて事前に検討しておきましょう。</p><p>なお、本プロセスにおける脆弱性対応の優先付けや取り組み方については「脆弱性診断士スキルマッププロジェクト」より公開している以下のドキュメントが参考となります。<br><a href="https://github.com/WebAppPentestGuidelines/TriageGuidelines/tree/main?tab=readme-ov-file">脆弱性トリアージガイドライン作成の手引き</a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/commit/adacb8ad0d1286d5748ea550af3692ac108782d6 title='最終更新者 wild0ni0n | 2024年11月1日' target=_blank rel=noopener><img src=/ASMGuidance/svg/calendar.svg class=book-icon alt>
+本プロセスにおける管理の方法・必要となる情報・対応内容などについて事前に検討しておきましょう。</p><p>なお、本プロセスにおける脆弱性対応の優先付けや取り組み方については「脆弱性診断士スキルマッププロジェクト」より公開している以下のドキュメントが参考となります。<br><a href="https://github.com/WebAppPentestGuidelines/TriageGuidelines/tree/main?tab=readme-ov-file">脆弱性トリアージガイドライン作成の手引き</a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/commit/1f8c9f23e0701c81a15f3723cf830a3469de420a title='最終更新者 wild0ni0n | 2024年11月1日' target=_blank rel=noopener><img src=/ASMGuidance/svg/calendar.svg class=book-icon alt>
 <span>2024年11月1日</span></a></div><div><a class="flex align-center" href=https://github.com/WebAppPentestGuidelines/asmguidance/edit/main/content/docs/chapter5/section3.md target=_blank rel=noopener><img src=/ASMGuidance/svg/edit.svg class=book-icon alt>
 <span>このページを編集する</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>
