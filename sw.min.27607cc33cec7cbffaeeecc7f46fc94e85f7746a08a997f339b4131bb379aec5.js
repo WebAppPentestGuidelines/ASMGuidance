@@ -1,0 +1,1 @@
+navigator.serviceWorker&&navigator.serviceWorker.register("/ASMGuidance/sw.js",{scope:"/ASMGuidance/"})

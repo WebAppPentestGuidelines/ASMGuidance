@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/asmguidance/</link><description>Recent content in Introduction on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/asmguidance/index.xml" rel="self" type="application/rss+xml"/><item><title>1.1 ASM（Attack Surface Management）の必要性</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter1/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter1/section1/</guid><description>&lt;h1 id="11-asmattack-surface-managementの必要性">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/ASMGuidance/</link><description>Recent content in Introduction on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/ASMGuidance/index.xml" rel="self" type="application/rss+xml"/><item><title>1.1 ASM（Attack Surface Management）の必要性</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter1/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter1/section1/</guid><description>&lt;h1 id="11-asmattack-surface-managementの必要性">
  1.1 ASM（Attack Surface Management）の必要性
  &lt;a class="anchor" href="#11-asmattack-surface-management%e3%81%ae%e5%bf%85%e8%a6%81%e6%80%a7">#&lt;/a>
 &lt;/h1>
@@ -17,7 +17,7 @@
 上記ドキュメントへのリンクは参考資料をご参照ください。&lt;/p>
 &lt;/blockquote>
 &lt;p>なお、経済産業省が発行したドキュメントはEASM（External Attack Surface Management）に注目しており、米国CISAが発行したドキュメントは直接ASMに言及しているものではありませんが、ASMが得意とする領域に言及しているため、ASMの活用検討時に役立つドキュメントとなっています。&lt;br>
-（ASMが得意とする領域＝インターネットに公開すべきでないインターフェース、管理対象とすべき機器やサーバーやプロトコルの種別など）&lt;/p></description></item><item><title>2.1 ASMとは</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmとは">
+（ASMが得意とする領域＝インターネットに公開すべきでないインターフェース、管理対象とすべき機器やサーバーやプロトコルの種別など）&lt;/p></description></item><item><title>2.1 ASMとは</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmとは">
  2.1 ASMとは
  &lt;a class="anchor" href="#21-asm%e3%81%a8%e3%81%af">#&lt;/a>
 &lt;/h1>
@@ -61,7 +61,7 @@
  &lt;td>ASMのプロセスを実現もしくは補助するために外部組織（セキュリティベンダ等）から提供を受けるサービス&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>3.1 課題の把握</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter3/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter3/section1/</guid><description>&lt;h1 id="31-課題の把握">
+&lt;/table></description></item><item><title>3.1 課題の把握</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter3/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter3/section1/</guid><description>&lt;h1 id="31-課題の把握">
  3.1 課題の把握
  &lt;a class="anchor" href="#31-%e8%aa%b2%e9%a1%8c%e3%81%ae%e6%8a%8a%e6%8f%a1">#&lt;/a>
 &lt;/h1>
@@ -96,7 +96,7 @@
  &lt;td>・ 第三者機関やメディアから脆弱性情報が共有されても、調査に時間がかかる&lt;br>・ 適切なサイバーセキュリティ施策がなされているかエビデンスを元に回答できない&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>4.1 ASMツールに求める機能</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section1/</guid><description>&lt;h1 id="41-asmツールに求める機能">
+&lt;/table></description></item><item><title>4.1 ASMツールに求める機能</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section1/</guid><description>&lt;h1 id="41-asmツールに求める機能">
  4.1 ASMツールに求める機能
  &lt;a class="anchor" href="#41-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ab%e6%b1%82%e3%82%81%e3%82%8b%e6%a9%9f%e8%83%bd">#&lt;/a>
 &lt;/h1>
@@ -244,7 +244,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>このように、ASMツールにはASM運用を円滑に行うためのサポート機能が備わっています。これらの機能を有効利用することで、ASM運用の課題解決や負荷を低減させることができます。&lt;/p></description></item><item><title>5.1 現状のIT資産の特定と評価</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section1/</guid><description>&lt;h1 id="51-現状のit資産の特定と評価">
+&lt;p>このように、ASMツールにはASM運用を円滑に行うためのサポート機能が備わっています。これらの機能を有効利用することで、ASM運用の課題解決や負荷を低減させることができます。&lt;/p></description></item><item><title>5.1 現状のIT資産の特定と評価</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section1/</guid><description>&lt;h1 id="51-現状のit資産の特定と評価">
  5.1 現状のIT資産の特定と評価
  &lt;a class="anchor" href="#51-%e7%8f%be%e7%8a%b6%e3%81%aeit%e8%b3%87%e7%94%a3%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%a8%e8%a9%95%e4%be%a1">#&lt;/a>
 &lt;/h1>
@@ -254,7 +254,7 @@
 ※ASMのプロセスは2.2節で紹介しています。&lt;/p>
 
 
-&lt;script src="https://webapppentestguidelines.github.io/asmguidance/asmguidance/mermaid.min.js">&lt;/script>
+&lt;script src="https://webapppentestguidelines.github.io/ASMGuidance/ASMGuidance/mermaid.min.js">&lt;/script>
 
  &lt;script>mermaid.initialize({
  "flowchart": {
@@ -300,7 +300,7 @@ ASM導入前の準備として、ASMで発見された未知のIT資産の管理
 &lt;/h3>
 &lt;p>資産の分類と評価を進めていく過程で設定の不備があるシステムや脆弱性情報が公開されているサーバーの存在が明らかになる場合もあります。脆弱性対応では対応コストが必要になるため、運用リソースの確保が必要になることを考慮しておきましょう。&lt;/p>
 &lt;p>上記のようなIT資産が発見された場合に、組織内で管理者（担当者）が分からず手がつけられない。といったことがないように、誰が発見されたIT資産の管理者探しをするのか等も役割を定めておきましょう。管理プロセスの詳細については後述の5.3節を参照してください。
-また、ASMで得られた結果を自組織のIT資産管理のプロセスに合流させ、継続して管理・評価に取り組むことも重要です。&lt;/p></description></item><item><title>ASMツールは脆弱性診断の代わりになる？</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column1/</guid><description>&lt;h1 id="asmツールは脆弱性診断の代わりになる">
+また、ASMで得られた結果を自組織のIT資産管理のプロセスに合流させ、継続して管理・評価に取り組むことも重要です。&lt;/p></description></item><item><title>ASMツールは脆弱性診断の代わりになる？</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column1/</guid><description>&lt;h1 id="asmツールは脆弱性診断の代わりになる">
  ASMツールは脆弱性診断の代わりになる？
  &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%af%e8%84%86%e5%bc%b1%e6%80%a7%e8%a8%ba%e6%96%ad%e3%81%ae%e4%bb%a3%e3%82%8f%e3%82%8a%e3%81%ab%e3%81%aa%e3%82%8b">#&lt;/a>
 &lt;/h1>
@@ -388,14 +388,14 @@ ASM導入前の準備として、ASMで発見された未知のIT資産の管理
 脆弱性診断では、脆弱性診断サービスを提供するベンダーや、対象のIT資産の管理者など関係者との調整も必要なため、ASMツールと比較して高コスト（高い労力と費用）となる場合が多いです。&lt;br>
 従って、高頻度での実施は難しく、年に1～数回程度の実施となることが一般的であり、ASMツールと比較するとリスク評価の対象は「狭く」なります。&lt;/p>
 &lt;p>一方で、リスク評価は、専門家が疑似的な攻撃の通信を行い脆弱性の存在を検証・特定するため、ASMツールと比較して「深く正確に」なります。&lt;br>
-しかし、スキャン通信による高負荷が発生する可能性や、セキュリティ監視システムに影響を及ぼす可能性があるため、実施前には関係者との事前の調整が必要です。&lt;/p></description></item><item><title>1.2 本ドキュメントの構成と読み進めるための補足</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter1/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter1/section2/</guid><description>&lt;h1 id="12-本ドキュメントの構成と読み進めるための補足">
+しかし、スキャン通信による高負荷が発生する可能性や、セキュリティ監視システムに影響を及ぼす可能性があるため、実施前には関係者との事前の調整が必要です。&lt;/p></description></item><item><title>1.2 本ドキュメントの構成と読み進めるための補足</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter1/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter1/section2/</guid><description>&lt;h1 id="12-本ドキュメントの構成と読み進めるための補足">
  1.2 本ドキュメントの構成と読み進めるための補足
  &lt;a class="anchor" href="#12-%e6%9c%ac%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e6%a7%8b%e6%88%90%e3%81%a8%e8%aa%ad%e3%81%bf%e9%80%b2%e3%82%81%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ae%e8%a3%9c%e8%b6%b3">#&lt;/a>
 &lt;/h1>
 &lt;p>Attack Surface Management（ASM）という用語は、攻撃対象となり得る資産（Attack Surface、アタックサーフェス）を管理（Management）することを指します。&lt;br>
 本ドキュメントでは、記載内容がASMによるアタックサーフェスの管理や運用プロセスを指すのか、ASMの運用を実現するための製品やツール、サービスを指すのかを分けるために用語の使い分けを試みています。（詳細は2章の用語の定義に記載します。）&lt;br>
 また本ドキュメントは、ASMの導入検討や取り組みを進める際の参考となるよう、3章で解決したい課題の確認（必要性の判断/要件確認）、4章でツール/サービスの選定、5章で運用体制の構築（導入準備）、6章で活用事例という構成にしています。&lt;br>
-導入検討から一歩離れるも、確認しておきたい点（ASM導入の是非、脆弱性診断との違い等）はコラムとして記載していますので、併せてご参照ください。&lt;/p></description></item><item><title>2.2 ASMのプロセス</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmのプロセス">
+導入検討から一歩離れるも、確認しておきたい点（ASM導入の是非、脆弱性診断との違い等）はコラムとして記載していますので、併せてご参照ください。&lt;/p></description></item><item><title>2.2 ASMのプロセス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmのプロセス">
  2.2 ASMのプロセス
  &lt;a class="anchor" href="#22-asm%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9">#&lt;/a>
 &lt;/h1>
@@ -420,7 +420,7 @@ IT資産管理は、元から自分たちで取り組んでいたIT資産管理�
 &lt;/ol>
 
 
-&lt;script src="https://webapppentestguidelines.github.io/asmguidance/asmguidance/mermaid.min.js">&lt;/script>
+&lt;script src="https://webapppentestguidelines.github.io/ASMGuidance/ASMGuidance/mermaid.min.js">&lt;/script>
 
  &lt;script>mermaid.initialize({
  "flowchart": {
@@ -458,7 +458,7 @@ flowchart TD
 &lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
 &lt;li>「従来の管理方法でアタックサーフェスを十分に管理できている組織であればASMに取り組む必要性が低い。」というよりも、既に十分にASMに取り組めていると考えられます。自組織にASMが必要であるのかについては3章に記載します。&lt;/li>
 &lt;/ul>
-&lt;/blockquote></description></item><item><title>3.2 課題解決のための要件定義</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter3/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter3/section2/</guid><description>&lt;h1 id="32-課題解決のための要件定義">
+&lt;/blockquote></description></item><item><title>3.2 課題解決のための要件定義</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter3/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter3/section2/</guid><description>&lt;h1 id="32-課題解決のための要件定義">
  3.2 課題解決のための要件定義
  &lt;a class="anchor" href="#32-%e8%aa%b2%e9%a1%8c%e8%a7%a3%e6%b1%ba%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e8%a6%81%e4%bb%b6%e5%ae%9a%e7%be%a9">#&lt;/a>
 &lt;/h1>
@@ -530,7 +530,7 @@ ASMツールやASMサービスは、提供する企業（セキュリティベ�
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>関連コラム：&lt;a href="../columns/column3/">本当にASMが必要ですか？&lt;/a>&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
+&lt;p>関連コラム：&lt;a href="../columns/column3/">本当にASMが必要ですか？&lt;/a>&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
  4.2 ASMツールの注意点
  &lt;a class="anchor" href="#42-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%b3%a8%e6%84%8f%e7%82%b9">#&lt;/a>
 &lt;/h1>
@@ -607,7 +607,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
 &lt;/h3>
 &lt;p>本ドキュメントで解説してきたようにASMはプロセスであり、ASMツールを導入して終わりではありません。ASMツールではその特性上、未把握のIT資産やリスク情報が大量に検出される可能性があり、運用負荷は高くなりがちです。導入前にASMで解決したい課題とその運用を検討し、十分なリソースを確保することが重要です。&lt;br>
 また、ASMツールによって検出された情報と、既存の情報やシステムとの連携についても事前に想定しておく必要があります。導入するASMツールの管理機能を利用するだけでなく、既存の情報をASMツール側に統合したり、逆に既存のセキュリティソリューションにASMツールの情報を連携させたりといった活用が考えられます。&lt;/p>
-&lt;p>なお、ほとんどのASMツールは購入前にトライアル(試用)することが可能です。導入前に、ドキュメントや仕様書による机上検証だけでなく実際に試してみることで、具体的な運用上の負担や影響を事前に確認することができます。本節で説明した注意点も踏まえながら、実際に試すことを推奨します。&lt;/p></description></item><item><title>5.2 主管の決定・運用リソースの確保</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section2/</guid><description>&lt;h1 id="52-主管の決定運用リソースの確保">
+&lt;p>なお、ほとんどのASMツールは購入前にトライアル(試用)することが可能です。導入前に、ドキュメントや仕様書による机上検証だけでなく実際に試してみることで、具体的な運用上の負担や影響を事前に確認することができます。本節で説明した注意点も踏まえながら、実際に試すことを推奨します。&lt;/p></description></item><item><title>5.2 主管の決定・運用リソースの確保</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section2/</guid><description>&lt;h1 id="52-主管の決定運用リソースの確保">
  5.2 主管の決定・運用リソースの確保
  &lt;a class="anchor" href="#52-%e4%b8%bb%e7%ae%a1%e3%81%ae%e6%b1%ba%e5%ae%9a%e9%81%8b%e7%94%a8%e3%83%aa%e3%82%bd%e3%83%bc%e3%82%b9%e3%81%ae%e7%a2%ba%e4%bf%9d">#&lt;/a>
 &lt;/h1>
@@ -615,7 +615,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
 &lt;p>運用には対応する人員が必要であり、当然コストが発生します。主管は後述する節に記載するような運用時の具体的な対応プロセスを想定し、想定する運用コストや運用者に必要なスキルなどについて導入事前に検討する必要があります。&lt;/p>
 &lt;p>例えば、後述する「発見したIT資産・脆弱性情報への対応プロセス」では担当部門とのやり取りが必要であるため、運用者にはコミュニケーションスキルやレポーティングスキルがあることが望ましいです。&lt;br>
 また、発見したIT資産や脆弱性情報について、検出した情報を正しく読み解き、運用側で切り分けを行う必要があるため、ある程度の技術的なスキルを持った人材が必要となります。&lt;a href="https://www.meti.go.jp/press/2023/05/20230529001/20230529001.html">経済産業省が発行したASMのガイドライン&lt;/a>の中でもASMツールの活用にあたって備えていると望ましい知識やスキルを詳細に定義しているので参考としてください。また、導入前にASMツールのトライアルを実施し、運用後の具体的なオペレーションを想定することで、実際の運用に必要となる運用者の人数や自組織での運用に必要となるスキルをより具体的に検討することができるため、実施を推奨します。&lt;/p>
-&lt;p>上記のような検討の上で、運用に必要となる対応人員のリソースを確保しましょう。検討の結果、自組織にて人員の確保が難しいことが分かった場合には、運用のアウトソースやASMサービスの利用なども検討すべきです。&lt;/p></description></item><item><title>ASMツールとASMサービスの違い</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column2/</guid><description>&lt;h1 id="asmツールとasmサービスの違い">
+&lt;p>上記のような検討の上で、運用に必要となる対応人員のリソースを確保しましょう。検討の結果、自組織にて人員の確保が難しいことが分かった場合には、運用のアウトソースやASMサービスの利用なども検討すべきです。&lt;/p></description></item><item><title>ASMツールとASMサービスの違い</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column2/</guid><description>&lt;h1 id="asmツールとasmサービスの違い">
  ASMツールとASMサービスの違い
  &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%a8asm%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e9%81%95%e3%81%84">#&lt;/a>
 &lt;/h1>
@@ -664,7 +664,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
  &lt;/tbody>
 &lt;/table>
 &lt;p>上記の通り、ASMツールとASMサービスには、それぞれ異なる特長があることが分かったのではないでしょうか？組織の規模、予算、リソースに応じて、最適なソリューションを選ぶことが重要です。&lt;/p>
-&lt;p>自組織に最適なASMソリューションの導入に向けて、これらの違いを理解し、後悔しない選択を行いましょう。&lt;/p></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
+&lt;p>自組織に最適なASMソリューションの導入に向けて、これらの違いを理解し、後悔しない選択を行いましょう。&lt;/p></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
  2.3 ASMや同カテゴリに類されることが多いツールやサービス
  &lt;a class="anchor" href="#23-asm%e3%82%84%e5%90%8c%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%81%ab%e9%a1%9e%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%8c%e5%a4%9a%e3%81%84%e3%83%84%e3%83%bc%e3%83%ab%e3%82%84%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9">#&lt;/a>
 &lt;/h1>
@@ -713,7 +713,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
 上記表は、ASMというカテゴリを全てを網羅する目的ではなく、&amp;ldquo;ASMっぽい&amp;quot;ツールやサービスの特徴を知っていただくために複数の種別を記載しています。&lt;br>
 そのため、各ツールやサービスの際立った特徴に注目しています。実際に提供されているツールやサービスは、複数の特徴を兼ね備えていたり、より広範な機能を備えていることもあります。&lt;br>
 （定義の誤りや加えるべきASMの種別がありましたらお知らせください。）&lt;/p>
-&lt;/blockquote></description></item><item><title>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter5/section3/</guid><description>&lt;h1 id="53-発見したit資産脆弱性情報への対応プロセスの検討">
+&lt;/blockquote></description></item><item><title>5.3 発見したIT資産・脆弱性情報への対応プロセスの検討</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter5/section3/</guid><description>&lt;h1 id="53-発見したit資産脆弱性情報への対応プロセスの検討">
  5.3 発見したIT資産・脆弱性情報への対応プロセスの検討
  &lt;a class="anchor" href="#53-%e7%99%ba%e8%a6%8b%e3%81%97%e3%81%9fit%e8%b3%87%e7%94%a3%e8%84%86%e5%bc%b1%e6%80%a7%e6%83%85%e5%a0%b1%e3%81%b8%e3%81%ae%e5%af%be%e5%bf%9c%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9%e3%81%ae%e6%a4%9c%e8%a8%8e">#&lt;/a>
 &lt;/h1>
@@ -763,7 +763,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
 &lt;p>確認・対応の依頼を行った結果、発見された脆弱性がどのようなステータスとなっているかを管理・追跡していく必要があります。例えば、修正対応を依頼したにも関わらず、対応期日までに脆弱性の修正が確認できていない場合などには、状況について確認する必要があるでしょう。
 本プロセスにおける管理の方法・必要となる情報・対応内容などについて事前に検討しておきましょう。&lt;/p>
 &lt;p>なお、本プロセスにおける脆弱性対応の優先付けや取り組み方については「脆弱性診断士スキルマッププロジェクト」より公開している以下のドキュメントが参考となります。&lt;br>
-&lt;a href="https://github.com/WebAppPentestGuidelines/TriageGuidelines/tree/main?tab=readme-ov-file">脆弱性トリアージガイドライン作成の手引き&lt;/a>&lt;/p></description></item><item><title>本当にASMが必要ですか？</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column3/</guid><description>&lt;h1 id="本当にasmが必要ですか">
+&lt;a href="https://github.com/WebAppPentestGuidelines/TriageGuidelines/tree/main?tab=readme-ov-file">脆弱性トリアージガイドライン作成の手引き&lt;/a>&lt;/p></description></item><item><title>本当にASMが必要ですか？</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column3/</guid><description>&lt;h1 id="本当にasmが必要ですか">
  本当にASMが必要ですか？
  &lt;a class="anchor" href="#%e6%9c%ac%e5%bd%93%e3%81%abasm%e3%81%8c%e5%bf%85%e8%a6%81%e3%81%a7%e3%81%99%e3%81%8b">#&lt;/a>
 &lt;/h1>
@@ -804,7 +804,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
 &lt;/table>
 &lt;p>上記はあくまで例ですが、組織で何が課題となっており、既存の管理施策ではなぜ解決できないのかを整理してみましょう。&lt;br>
 整理することで、阻害要因や制約事項が明確になるかもしれません。&lt;/p>
-&lt;p>なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。&lt;/p></description></item><item><title>ASM導入後に確認したいポイント</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column4/</guid><description>&lt;h1 id="asm導入後に確認したいポイント">
+&lt;p>なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。&lt;/p></description></item><item><title>ASM導入後に確認したいポイント</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column4/</guid><description>&lt;h1 id="asm導入後に確認したいポイント">
  ASM導入後に確認したいポイント
  &lt;a class="anchor" href="#asm%e5%b0%8e%e5%85%a5%e5%be%8c%e3%81%ab%e7%a2%ba%e8%aa%8d%e3%81%97%e3%81%9f%e3%81%84%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88">#&lt;/a>
 &lt;/h1>
@@ -844,7 +844,7 @@ ASMツールは発見されたIT資産に対してリスクの検出・評価も
 &lt;/table>
 &lt;p>ASMを運用することで得られる価値は、上記の「好ましい状態」を達成して、外部（インターネット）から見た自組織の安全を保つことです、
 一見すると、番号2は「懸念がある状態」の方がASMの価値を実感できると思う方が多いと思います。確かにASMツールやサービスの実行結果として、普段気付けなかった問題に気付けるのは価値があることです。しかし、ASMのプロセスを回して改善に取り組んでいるのに、未知のIT資産や対応が必要なリスクが発見され続けるのは、組織としてのガバナンスが追いていない無法地帯状態になってしまっていると考えられるため「懸念がある状態」としています。&lt;br>
-ASM導入による価値を得られやすい状態にするためにも、単に導入・運用するだけでなく、既存のIT資産管理プロセスと組み合わせたり、ASMの結果を踏まえて組織としてのガバナンスを見直したりすることをお勧めします。&lt;/p></description></item><item><title>ASMツールの拡張機能と付加価値</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/columns/column5/</guid><description>&lt;h1 id="asmツールの拡張機能と付加価値">
+ASM導入による価値を得られやすい状態にするためにも、単に導入・運用するだけでなく、既存のIT資産管理プロセスと組み合わせたり、ASMの結果を踏まえて組織としてのガバナンスを見直したりすることをお勧めします。&lt;/p></description></item><item><title>ASMツールの拡張機能と付加価値</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column5/</guid><description>&lt;h1 id="asmツールの拡張機能と付加価値">
  ASMツールの拡張機能と付加価値
  &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%a8%e4%bb%98%e5%8a%a0%e4%be%a1%e5%80%a4">#&lt;/a>
 &lt;/h1>

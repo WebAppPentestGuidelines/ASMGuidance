@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/</link><description>Recent content in 第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/index.xml" rel="self" type="application/rss+xml"/><item><title>2.1 ASMとは</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmとは">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/</link><description>Recent content in 第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/index.xml" rel="self" type="application/rss+xml"/><item><title>2.1 ASMとは</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmとは">
  2.1 ASMとは
  &lt;a class="anchor" href="#21-asm%e3%81%a8%e3%81%af">#&lt;/a>
 &lt;/h1>
@@ -42,7 +42,7 @@
  &lt;td>ASMのプロセスを実現もしくは補助するために外部組織（セキュリティベンダ等）から提供を受けるサービス&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>2.2 ASMのプロセス</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmのプロセス">
+&lt;/table></description></item><item><title>2.2 ASMのプロセス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmのプロセス">
  2.2 ASMのプロセス
  &lt;a class="anchor" href="#22-asm%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9">#&lt;/a>
 &lt;/h1>
@@ -67,7 +67,7 @@ IT資産管理は、元から自分たちで取り組んでいたIT資産管理�
 &lt;/ol>
 
 
-&lt;script src="https://webapppentestguidelines.github.io/asmguidance/asmguidance/mermaid.min.js">&lt;/script>
+&lt;script src="https://webapppentestguidelines.github.io/ASMGuidance/ASMGuidance/mermaid.min.js">&lt;/script>
 
  &lt;script>mermaid.initialize({
  "flowchart": {
@@ -105,7 +105,7 @@ flowchart TD
 &lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
 &lt;li>「従来の管理方法でアタックサーフェスを十分に管理できている組織であればASMに取り組む必要性が低い。」というよりも、既に十分にASMに取り組めていると考えられます。自組織にASMが必要であるのかについては3章に記載します。&lt;/li>
 &lt;/ul>
-&lt;/blockquote></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
+&lt;/blockquote></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
  2.3 ASMや同カテゴリに類されることが多いツールやサービス
  &lt;a class="anchor" href="#23-asm%e3%82%84%e5%90%8c%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%81%ab%e9%a1%9e%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%8c%e5%a4%9a%e3%81%84%e3%83%84%e3%83%bc%e3%83%ab%e3%82%84%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9">#&lt;/a>
 &lt;/h1>

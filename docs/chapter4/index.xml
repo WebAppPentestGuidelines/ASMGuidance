@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/</link><description>Recent content in 第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/index.xml" rel="self" type="application/rss+xml"/><item><title>4.1 ASMツールに求める機能</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section1/</guid><description>&lt;h1 id="41-asmツールに求める機能">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/</link><description>Recent content in 第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/index.xml" rel="self" type="application/rss+xml"/><item><title>4.1 ASMツールに求める機能</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section1/</guid><description>&lt;h1 id="41-asmツールに求める機能">
  4.1 ASMツールに求める機能
  &lt;a class="anchor" href="#41-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ab%e6%b1%82%e3%82%81%e3%82%8b%e6%a9%9f%e8%83%bd">#&lt;/a>
 &lt;/h1>
@@ -146,7 +146,7 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>このように、ASMツールにはASM運用を円滑に行うためのサポート機能が備わっています。これらの機能を有効利用することで、ASM運用の課題解決や負荷を低減させることができます。&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/asmguidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
+&lt;p>このように、ASMツールにはASM運用を円滑に行うためのサポート機能が備わっています。これらの機能を有効利用することで、ASM運用の課題解決や負荷を低減させることができます。&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
  4.2 ASMツールの注意点
  &lt;a class="anchor" href="#42-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%b3%a8%e6%84%8f%e7%82%b9">#&lt;/a>
 &lt;/h1>

@@ -1,14 +1,14 @@
 {
   "name": "ASM導入検討を進めるためのガイダンス（基礎編）",
   "short_name": "ASM導入検討を進めるためのガイダンス（基礎編）",
-  "start_url": "/asmguidance/",
-  "scope": "/asmguidance/",
+  "start_url": "/ASMGuidance/",
+  "scope": "/ASMGuidance/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/asmguidance/favicon.svg",
+      "src": "/ASMGuidance/favicon.svg",
       "sizes": "512x512"
     }
   ]
