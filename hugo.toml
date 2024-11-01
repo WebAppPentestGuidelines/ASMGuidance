@@ -1,4 +1,4 @@
-baseURL = 'https://webapppentestguidelines.github.io/asmguidance/'
+baseURL = 'https://webapppentestguidelines.github.io/ASMGuidance/'
 defaultContentLanguage = 'ja'
 languageCode = 'ja'
 title = 'ASM導入検討を進めるためのガイダンス（基礎編）'
