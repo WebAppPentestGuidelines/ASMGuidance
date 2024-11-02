@@ -455,7 +455,7 @@ flowchart TD
 &lt;blockquote class="book-hint info">
 &lt;p>&lt;strong>補足&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
+&lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
 &lt;li>「従来の管理方法でアタックサーフェスを十分に管理できている組織であればASMに取り組む必要性が低い。」というよりも、既に十分にASMに取り組めていると考えられます。自組織にASMが必要であるのかについては3章に記載します。&lt;/li>
 &lt;/ul>
 &lt;/blockquote></description></item><item><title>3.2 課題解決のための要件定義</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter3/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter3/section2/</guid><description>&lt;h1 id="32-課題解決のための要件定義">
@@ -530,7 +530,7 @@ ASMツールやASMサービスは、提供する企業（セキュリティベ�
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>関連コラム：&lt;a href="../columns/column3/">本当にASMが必要ですか？&lt;/a>&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
+&lt;p>関連コラム：&lt;a href="../../columns/column3/">本当にASMが必要ですか？&lt;/a>&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
  4.2 ASMツールの注意点
  &lt;a class="anchor" href="#42-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%b3%a8%e6%84%8f%e7%82%b9">#&lt;/a>
 &lt;/h1>

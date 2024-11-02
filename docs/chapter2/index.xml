@@ -102,7 +102,7 @@ flowchart TD
 &lt;blockquote class="book-hint info">
 &lt;p>&lt;strong>補足&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
+&lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
 &lt;li>「従来の管理方法でアタックサーフェスを十分に管理できている組織であればASMに取り組む必要性が低い。」というよりも、既に十分にASMに取り組めていると考えられます。自組織にASMが必要であるのかについては3章に記載します。&lt;/li>
 &lt;/ul>
 &lt;/blockquote></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
