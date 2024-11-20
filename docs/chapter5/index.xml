@@ -6,6 +6,7 @@
 守るべき資産やその範囲、管理方針（管理プロセス）などを決定しておくことで、ASM導入後に発見されたIT資産を管理プロセスに合流させることができます。（そもそも守るべき資産や管理策が定まっていないと、ASMに取り組んでも管理者を特定できずに放置されてしまう可能性があります。）&lt;/p>
 &lt;p>ASMに取り組む前の自組織の資産の特定は、以下のプロセスで行うことを推奨します。
 ※ASMのプロセスは2.2節で紹介しています。&lt;/p>
+&lt;center>
 
 
 &lt;script src="https://webapppentestguidelines.github.io/ASMGuidance/ASMGuidance/mermaid.min.js">&lt;/script>
@@ -29,6 +30,7 @@ flowchart LR
  A --> B --> C --> |可能なら|D(リスクの設定)
 &lt;/pre>
 
+&lt;/center>
 &lt;p>組織がISMS(ISO27001)認証を受けている場合には、IT資産を管理している台帳を採用することも効果的です。&lt;/p>
 &lt;h3 id="asmから始めるのも手段の１つ">
  ASMから始めるのも手段の１つ
