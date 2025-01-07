@@ -41,3 +41,7 @@ googleAnalytics = "G-0M2SXTB196"
   BookServiceWorker = true
 [markup.goldmark.renderer]
   unsafe = true
+
+[page]
+  nextPrevInSectionSortOrder = 'asc'
+  nextPrevSortOrder = 'asc'

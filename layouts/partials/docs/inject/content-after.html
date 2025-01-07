@@ -1,11 +1,9 @@
-{{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
-
 <hr>
 
 <div class=" book-columns flex flex-wrap justify-between" style="margin:2rem 0 2rem 0;">
 
   <div class="flex markdown-inner justify-start">
-    {{ with $pages.Prev . }}
+    {{ with .Prev }}
 
     <a class="flex" href="{{ .RelPermalink }}">
     <svg class="book-icon" fill="#000000" height="16px" width="16px" version="1.1" id="next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 477.175 477.175" xml:space="preserve">
@@ -19,7 +17,7 @@
   </div>
 
 <div class="flex markdown-inner justify-end">
-    {{ with $pages.Next . }}
+    {{ with .Next }}
     <a class="flex" href="{{ .RelPermalink }}">
     {{ .Title }}
     <svg class="book-icon" fill="#000000" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 477.175 477.175" xml:space="preserve">
