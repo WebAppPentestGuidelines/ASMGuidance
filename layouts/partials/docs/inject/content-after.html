@@ -1,7 +1,5 @@
 {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
-{{ range $index, $page := $pages }}
-    <p>{{ $page.Title }}</p>
-{{ end }}
+
 <hr>
 
 <div class=" book-columns flex flex-wrap justify-between" style="margin:2rem 0 2rem 0;">
