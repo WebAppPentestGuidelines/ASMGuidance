@@ -4,7 +4,7 @@ description: "ASM導入検討を進めるためのガイダンス（基礎編）
 weight: 20
 type: docs
 # bookFlatSection: false
-# bookToc: false
+bookToc: false
 # bookHidden: false
 # bookCollapseSection: false
 # bookComments: false
