@@ -1,6 +1,7 @@
 ---
 title: "Introduction"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
+weight: 1
 type: docs
 bookToc: false
 ---

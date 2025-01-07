@@ -1,7 +1,8 @@
 ---
 title: "5.3 発見したIT資産・脆弱性情報への対応プロセスの検討"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 3
+weight: 53
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false

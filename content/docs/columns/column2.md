@@ -1,7 +1,8 @@
 ---
 title: "ASMツールとASMサービスの違い"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 2
+weight: 72
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false

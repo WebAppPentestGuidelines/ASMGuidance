@@ -1,6 +1,7 @@
 ---
 title: "参考資料"
-weight: 8
+weight: 80
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false

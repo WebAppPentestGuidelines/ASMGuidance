@@ -1,7 +1,7 @@
 ---
-title: "第1章 はじめに"
+title: "ASM導入検討を進めるためのガイダンス（基礎編）"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 10
+weight: 0
 type: chapter
 # bookFlatSection: false
 # bookToc: true

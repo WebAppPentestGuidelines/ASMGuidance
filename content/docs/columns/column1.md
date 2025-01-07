@@ -1,7 +1,8 @@
 ---
 title: "ASMツールは脆弱性診断の代わりになる？"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 1
+weight: 71
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false

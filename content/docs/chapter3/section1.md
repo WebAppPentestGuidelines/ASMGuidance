@@ -1,7 +1,8 @@
 ---
 title: "3.1 課題の把握"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 1
+weight: 31
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false

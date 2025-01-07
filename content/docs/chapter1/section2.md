@@ -1,7 +1,8 @@
 ---
 title: "1.2 本ドキュメントの構成と読み進めるための補足"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 2
+weight: 12
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false

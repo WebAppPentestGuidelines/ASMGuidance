@@ -1,7 +1,8 @@
 ---
 title: "本当にASMが必要ですか？"
 description: "ASM導入検討を進めるためのガイダンス（基礎編）"
-weight: 3
+weight: 73
+type: docs
 # bookFlatSection: false
 bookToc: false
 # bookHidden: false
