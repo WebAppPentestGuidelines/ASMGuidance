@@ -4,6 +4,7 @@ languageCode = 'ja'
 title = 'ASM導入検討を進めるためのガイダンス（基礎編）'
 enableGitInfo = true
 theme = 'hugo-book'
+googleAnalytics = "G-0M2SXTB196"
 
 # (Optional) If you provide a Disqus shortname, comments will be enabled on
 # all pages.
