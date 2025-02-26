@@ -1,4 +1,4 @@
-baseURL = 'https://webapppentestguidelines.github.io/ASMGuidance/'
+baseURL = 'https://wg1.isog-j.org/ASMGuidance/'
 defaultContentLanguage = 'ja'
 languageCode = 'ja'
 title = 'ASM導入検討を進めるためのガイダンス（基礎編）'
