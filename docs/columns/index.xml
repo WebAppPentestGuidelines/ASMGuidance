@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>コラム on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/</link><description>Recent content in コラム on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/index.xml" rel="self" type="application/rss+xml"/><item><title>ASMツールは脆弱性診断の代わりになる？</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column1/</guid><description>&lt;h1 id="asmツールは脆弱性診断の代わりになる">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>コラム on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://wg1.isog-j.org/ASMGuidance/docs/columns/</link><description>Recent content in コラム on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://wg1.isog-j.org/ASMGuidance/docs/columns/index.xml" rel="self" type="application/rss+xml"/><item><title>ASMツールは脆弱性診断の代わりになる？</title><link>https://wg1.isog-j.org/ASMGuidance/docs/columns/column1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/columns/column1/</guid><description>&lt;h1 id="asmツールは脆弱性診断の代わりになる">
  ASMツールは脆弱性診断の代わりになる？
  &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%af%e8%84%86%e5%bc%b1%e6%80%a7%e8%a8%ba%e6%96%ad%e3%81%ae%e4%bb%a3%e3%82%8f%e3%82%8a%e3%81%ab%e3%81%aa%e3%82%8b">#&lt;/a>
 &lt;/h1>
@@ -86,7 +86,7 @@
 脆弱性診断では、脆弱性診断サービスを提供するベンダーや、対象のIT資産の管理者など関係者との調整も必要なため、ASMツールと比較して高コスト（高い労力と費用）となる場合が多いです。&lt;br>
 従って、高頻度での実施は難しく、年に1～数回程度の実施となることが一般的であり、ASMツールと比較するとリスク評価の対象は「狭く」なります。&lt;/p>
 &lt;p>一方で、リスク評価は、専門家が疑似的な攻撃の通信を行い脆弱性の存在を検証・特定するため、ASMツールと比較して「深く正確に」なります。&lt;br>
-しかし、スキャン通信による高負荷が発生する可能性や、セキュリティ監視システムに影響を及ぼす可能性があるため、実施前には関係者との事前の調整が必要です。&lt;/p></description></item><item><title>ASMツールとASMサービスの違い</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column2/</guid><description>&lt;h1 id="asmツールとasmサービスの違い">
+しかし、スキャン通信による高負荷が発生する可能性や、セキュリティ監視システムに影響を及ぼす可能性があるため、実施前には関係者との事前の調整が必要です。&lt;/p></description></item><item><title>ASMツールとASMサービスの違い</title><link>https://wg1.isog-j.org/ASMGuidance/docs/columns/column2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/columns/column2/</guid><description>&lt;h1 id="asmツールとasmサービスの違い">
  ASMツールとASMサービスの違い
  &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%a8asm%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%81%ae%e9%81%95%e3%81%84">#&lt;/a>
 &lt;/h1>
@@ -135,7 +135,7 @@
  &lt;/tbody>
 &lt;/table>
 &lt;p>上記の通り、ASMツールとASMサービスには、それぞれ異なる特長があることが分かったのではないでしょうか？組織の規模、予算、リソースに応じて、最適なソリューションを選ぶことが重要です。&lt;/p>
-&lt;p>自組織に最適なASMソリューションの導入に向けて、これらの違いを理解し、後悔しない選択を行いましょう。&lt;/p></description></item><item><title>本当にASMが必要ですか？</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column3/</guid><description>&lt;h1 id="本当にasmが必要ですか">
+&lt;p>自組織に最適なASMソリューションの導入に向けて、これらの違いを理解し、後悔しない選択を行いましょう。&lt;/p></description></item><item><title>本当にASMが必要ですか？</title><link>https://wg1.isog-j.org/ASMGuidance/docs/columns/column3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/columns/column3/</guid><description>&lt;h1 id="本当にasmが必要ですか">
  本当にASMが必要ですか？
  &lt;a class="anchor" href="#%e6%9c%ac%e5%bd%93%e3%81%abasm%e3%81%8c%e5%bf%85%e8%a6%81%e3%81%a7%e3%81%99%e3%81%8b">#&lt;/a>
 &lt;/h1>
@@ -176,7 +176,7 @@
 &lt;/table>
 &lt;p>上記はあくまで例ですが、組織で何が課題となっており、既存の管理施策ではなぜ解決できないのかを整理してみましょう。&lt;br>
 整理することで、阻害要因や制約事項が明確になるかもしれません。&lt;/p>
-&lt;p>なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。&lt;/p></description></item><item><title>ASM導入後に確認したいポイント</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column4/</guid><description>&lt;h1 id="asm導入後に確認したいポイント">
+&lt;p>なお、ASMの運用を想定した時にASMツールでは不十分な点がASMサービスであれば解消されることもあるため、ASMツール、ASMサービス、従来の管理施策の改善という選択肢があることを念頭に、導入是非や要件を検討することが重要です。&lt;/p></description></item><item><title>ASM導入後に確認したいポイント</title><link>https://wg1.isog-j.org/ASMGuidance/docs/columns/column4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/columns/column4/</guid><description>&lt;h1 id="asm導入後に確認したいポイント">
  ASM導入後に確認したいポイント
  &lt;a class="anchor" href="#asm%e5%b0%8e%e5%85%a5%e5%be%8c%e3%81%ab%e7%a2%ba%e8%aa%8d%e3%81%97%e3%81%9f%e3%81%84%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88">#&lt;/a>
 &lt;/h1>
@@ -216,7 +216,7 @@
 &lt;/table>
 &lt;p>ASMを運用することで得られる価値は、上記の「好ましい状態」を達成して、外部（インターネット）から見た自組織の安全を保つことです、
 一見すると、番号2は「懸念がある状態」の方がASMの価値を実感できると思う方が多いと思います。確かにASMツールやサービスの実行結果として、普段気付けなかった問題に気付けるのは価値があることです。しかし、ASMのプロセスを回して改善に取り組んでいるのに、未知のIT資産や対応が必要なリスクが発見され続けるのは、組織としてのガバナンスが追いていない無法地帯状態になってしまっていると考えられるため「懸念がある状態」としています。&lt;br>
-ASM導入による価値を得られやすい状態にするためにも、単に導入・運用するだけでなく、既存のIT資産管理プロセスと組み合わせたり、ASMの結果を踏まえて組織としてのガバナンスを見直したりすることをお勧めします。&lt;/p></description></item><item><title>ASMツールの拡張機能と付加価値</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/columns/column5/</guid><description>&lt;h1 id="asmツールの拡張機能と付加価値">
+ASM導入による価値を得られやすい状態にするためにも、単に導入・運用するだけでなく、既存のIT資産管理プロセスと組み合わせたり、ASMの結果を踏まえて組織としてのガバナンスを見直したりすることをお勧めします。&lt;/p></description></item><item><title>ASMツールの拡張機能と付加価値</title><link>https://wg1.isog-j.org/ASMGuidance/docs/columns/column5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/columns/column5/</guid><description>&lt;h1 id="asmツールの拡張機能と付加価値">
  ASMツールの拡張機能と付加価値
  &lt;a class="anchor" href="#asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%81%a8%e4%bb%98%e5%8a%a0%e4%be%a1%e5%80%a4">#&lt;/a>
 &lt;/h1>

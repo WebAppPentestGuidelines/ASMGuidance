@@ -1,6 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/</link><description>Recent content in 第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/index.xml" rel="self" type="application/rss+xml"/><item><title>4.1 ASMツールに求める機能</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section1/</guid><description>&lt;h1 id="41-asmツールに求める機能">
- 4.1 ASMツールに求める機能
- &lt;a class="anchor" href="#41-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ab%e6%b1%82%e3%82%81%e3%82%8b%e6%a9%9f%e8%83%bd">#&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/</link><description>Recent content in 第4章 ASMツール/サービスの選定 on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://wg1.isog-j.org/ASMGuidance/docs/chapter4/index.xml" rel="self" type="application/rss+xml"/><item><title>4.1 本章でのケース設定</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/section1/</guid><description>&lt;h1 id="41-本章でのケース設定">
+ 4.1 本章でのケース設定
+ &lt;a class="anchor" href="#41-%e6%9c%ac%e7%ab%a0%e3%81%a7%e3%81%ae%e3%82%b1%e3%83%bc%e3%82%b9%e8%a8%ad%e5%ae%9a">#&lt;/a>
+&lt;/h1>
+&lt;p>課題を整理した結果、やはりASM導入が必要となるケースもあります。前節で挙げた課題の一部を例にとり、考察してみます。&lt;/p>
+&lt;ul>
+&lt;li>企業構造や組織構造により、IT資産を一元管理することが難しい&lt;/li>
+&lt;li>脆弱性管理は現場に委ねており、第三者的観点を取り入れられていない&lt;/li>
+&lt;li>攻撃に悪用されている脆弱性が公表されても、横断的な調査に時間がかかる&lt;/li>
+&lt;/ul>
+&lt;p>上記の課題解決を既存の枠組みのまま行うには、膨大なコミュニケーション・人的・金銭的コストがかかることが予想できるため、ASMが解決手段の一つの選択肢となり得ます。&lt;br>
+本ケースで必要となるASMの機能は、インターネット上のIT資産の探索と脆弱性の調査であるため、EASMが要件に合致するツールとして候補にあがります。本章で掘り下げて解説します。&lt;/p>
+&lt;p>&lt;strong>本章ではEASM（インターネット上のIT資産の探索と脆弱性の調査）のことをASMとして説明していきます。&lt;/strong>&lt;/p></description></item><item><title>4.2 ASMツールに求める機能</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールに求める機能">
+ 4.2 ASMツールに求める機能
+ &lt;a class="anchor" href="#42-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ab%e6%b1%82%e3%82%81%e3%82%8b%e6%a9%9f%e8%83%bd">#&lt;/a>
 &lt;/h1>
 &lt;p>本節では「本ドキュメントでのケース設定」に対応する形でASMツールに求められる機能を説明します。なお、ASMツールは提供する企業（セキュリティベンダ）によって機能や内容が多岐に渡るため、本節では多くのASMツールに共通するコア機能である「IT資産の発見」機能、「脆弱性情報含むIT資産の付加情報収集」機能、そして「IT資産のリスク評価」機能を説明し、最後にASMツールによって実装有無が異なるその他機能を説明します。&lt;/p>
 &lt;h2 id="it資産の発見">
@@ -146,9 +158,9 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>このように、ASMツールにはASM運用を円滑に行うためのサポート機能が備わっています。これらの機能を有効利用することで、ASM運用の課題解決や負荷を低減させることができます。&lt;/p></description></item><item><title>4.2 ASMツールの注意点</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter4/section2/</guid><description>&lt;h1 id="42-asmツールの注意点">
- 4.2 ASMツールの注意点
- &lt;a class="anchor" href="#42-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%b3%a8%e6%84%8f%e7%82%b9">#&lt;/a>
+&lt;p>このように、ASMツールにはASM運用を円滑に行うためのサポート機能が備わっています。これらの機能を有効利用することで、ASM運用の課題解決や負荷を低減させることができます。&lt;/p></description></item><item><title>4.3 ASMツールの注意点</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter4/section3/</guid><description>&lt;h1 id="43-asmツールの注意点">
+ 4.3 ASMツールの注意点
+ &lt;a class="anchor" href="#43-asm%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e6%b3%a8%e6%84%8f%e7%82%b9">#&lt;/a>
 &lt;/h1>
 &lt;p>ASMツールは、組織のIT資産（特にアタックサーフェス）の洗い出しや管理をする上で有用ですが、ツールの機能や導入・運用に際しては注意が必要な点もあります。&lt;/p>
 &lt;h2 id="asmツールの機能に関する注意点">

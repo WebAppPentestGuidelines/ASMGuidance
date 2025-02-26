@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/</link><description>Recent content in 第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/index.xml" rel="self" type="application/rss+xml"/><item><title>2.1 ASMとは</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmとは">
- 2.1 ASMとは
- &lt;a class="anchor" href="#21-asm%e3%81%a8%e3%81%af">#&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/</link><description>Recent content in 第2章 Attack Surface Management（ASM）とは何か on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://wg1.isog-j.org/ASMGuidance/docs/chapter2/index.xml" rel="self" type="application/rss+xml"/><item><title>2.1 ASMの位置づけ</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section1/</guid><description>&lt;h1 id="21-asmの位置づけ">
+ 2.1 ASMの位置づけ
+ &lt;a class="anchor" href="#21-asm%e3%81%ae%e4%bd%8d%e7%bd%ae%e3%81%a5%e3%81%91">#&lt;/a>
+&lt;/h1>
+&lt;p>ASMは資産管理をするためのプロセスであるのか、コンセプトであるのか、難しい位置づけにあります。ASMの説明の多くが管理対象である資産を探すこともプロセスに含まれていること、その方法が明確に定義されていないこと、異なるアプローチの製品やサービスが存在することが、ASMという用語をわかりづらくしてしまっている点のように感じています。&lt;br>
+そのため、この章では「ASMとは何か？」と「ASM関連用語」を定義するのに加えて「代表的なツールやサービスの種別」を記載します。&lt;/p></description></item><item><title>2.2 ASMとは</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmとは">
+ 2.2 ASMとは
+ &lt;a class="anchor" href="#22-asm%e3%81%a8%e3%81%af">#&lt;/a>
 &lt;/h1>
 &lt;p>「ASMとは」を記載する上で重要となるのが、ASMの解釈や定義です。しかし、&amp;ldquo;ASM&amp;quot;も管理対象である&amp;quot;AS（アタックサーフェス）&amp;ldquo;も様々なドキュメントで様々に表現されており定義が統一されていません。本ドキュメントでは新しい定義の創出による混乱を防ぐために、ASMの定義を&lt;a href="https://www.meti.go.jp/press/2023/05/20230529001/20230529001.html">「ASM（Attack Surface Management）導入ガイダンス～外部から把握出来る情報を用いて自組織のIT資産を発見し管理する～（経済産業省）」&lt;/a>と同意として記載を進めます。&lt;/p>
 &lt;h2 id="asmの定義">
@@ -8,8 +13,7 @@
  &lt;a class="anchor" href="#asm%e3%81%ae%e5%ae%9a%e7%be%a9">#&lt;/a>
 &lt;/h2>
 &lt;blockquote>
-&lt;p>組織の外部（インターネット）からアクセス可能な IT 資産を発見し、それらに存在する脆弱性などのリスクを継続的に検出・評価する一連のプロセス&lt;/p>
-&lt;/blockquote>
+&lt;p>組織の外部（インターネット）からアクセス可能な IT 資産を発見し、それらに存在する脆弱性などのリスクを継続的に検出・評価する一連のプロセス&lt;/p>&lt;/blockquote>
 &lt;p>上記は管理対象であるAS（アタックサーフェス）を「組織の外部（インターネット）からアクセス可能なIT資産」と定義しているための記載です。本ドキュメントにおいても、「1.2 ASMの必要性」でご紹介したASMに注目が集まった背景（課題）から、ASの定義を経済産業省のドキュメントと同様に「組織の外部（インターネット）からアクセス可能なIT資産」とします。&lt;/p>
 &lt;p>また、さらに定義の理解を難しくしているのが「IT資産」です。管理対象を「組織の外部からアクセス可能なIT資産」とそのまま捉えると、外部に露出している情報資産（従業員の情報、メールアドレス等）や詳細なシステム構成情報も管理対象に含まれる（含めるべき）という解釈も可能となります。本ドキュメントでは理解を進めやすくするために、IT資産の中でも、システムやサーバー、その構成情報やIPアドレス等を管理対象として想定しています。&lt;/p>
 &lt;p>本ドキュメントでのASM関連用語の定義は以下のとおりとしています。&lt;/p>
@@ -42,9 +46,9 @@
  &lt;td>ASMのプロセスを実現もしくは補助するために外部組織（セキュリティベンダ等）から提供を受けるサービス&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>2.2 ASMのプロセス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section2/</guid><description>&lt;h1 id="22-asmのプロセス">
- 2.2 ASMのプロセス
- &lt;a class="anchor" href="#22-asm%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9">#&lt;/a>
+&lt;/table></description></item><item><title>2.3 ASMのプロセス</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmのプロセス">
+ 2.3 ASMのプロセス
+ &lt;a class="anchor" href="#23-asm%e3%81%ae%e3%83%97%e3%83%ad%e3%82%bb%e3%82%b9">#&lt;/a>
 &lt;/h1>
 &lt;p>本ドキュメントで参照する定義「組織の外部（インターネット）からアクセス可能な IT 資産を発見し、それらに存在する脆弱性などのリスクを継続的に検出・評価する一連のプロセス」は抽象度が高い状態です。改めてプロセスを紐解くと以下のように解釈可能です。&lt;/p>
 &lt;ol>
@@ -68,7 +72,7 @@ IT資産管理は、元から自分たちで取り組んでいたIT資産管理�
 &lt;center>
 
 
-&lt;script src="https://webapppentestguidelines.github.io/ASMGuidance/ASMGuidance/mermaid.min.js">&lt;/script>
+&lt;script src="https://wg1.isog-j.org/ASMGuidance/mermaid.min.js">&lt;/script>
 
  &lt;script>mermaid.initialize({
  "flowchart": {
@@ -107,11 +111,11 @@ flowchart TD
 &lt;li>ASMツールと脆弱性診断の特徴を解説した関連コラム「&lt;a href="../../columns/column1/">ASMツールは脆弱性診断の代わりになる？&lt;/a>」もあわせてご参照ください。&lt;/li>
 &lt;li>「従来の管理方法でアタックサーフェスを十分に管理できている組織であればASMに取り組む必要性が低い。」というよりも、既に十分にASMに取り組めていると考えられます。自組織にASMが必要であるのかについては3章に記載します。&lt;/li>
 &lt;/ul>
-&lt;/blockquote></description></item><item><title>2.3 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://webapppentestguidelines.github.io/ASMGuidance/docs/chapter2/section3/</guid><description>&lt;h1 id="23-asmや同カテゴリに類されることが多いツールやサービス">
- 2.3 ASMや同カテゴリに類されることが多いツールやサービス
- &lt;a class="anchor" href="#23-asm%e3%82%84%e5%90%8c%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%81%ab%e9%a1%9e%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%8c%e5%a4%9a%e3%81%84%e3%83%84%e3%83%bc%e3%83%ab%e3%82%84%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9">#&lt;/a>
+&lt;/blockquote></description></item><item><title>2.4 ASMや同カテゴリに類されることが多いツールやサービス</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter2/section4/</guid><description>&lt;h1 id="24-asmや同カテゴリに類されることが多いツールやサービス">
+ 2.4 ASMや同カテゴリに類されることが多いツールやサービス
+ &lt;a class="anchor" href="#24-asm%e3%82%84%e5%90%8c%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%81%ab%e9%a1%9e%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%8c%e5%a4%9a%e3%81%84%e3%83%84%e3%83%bc%e3%83%ab%e3%82%84%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9">#&lt;/a>
 &lt;/h1>
-&lt;p>2.1節のASMの定義のみでは、具体的なIT資産の発見（検出）の方法や継続的な評価プロセスは定義されていません。 &lt;br>
+&lt;p>2.2節のASMの定義のみでは、具体的なIT資産の発見（検出）の方法や継続的な評価プロセスは定義されていません。 &lt;br>
 そのため、ASMツールやASMサービスは、それぞれで資産の発見（検出）のための調査や情報取得方法、取得した情報の管理アプローチを持っています。&lt;/p>
 &lt;p>例えば、資産情報の取得を例にしても、Web上の資産を探索する、情報連携のためのエージェントを管理対象の資産に導入する、脆弱性スキャンと連携するなど、複数のアプローチがあります。そのため、検討しているASMツールやサービスがどのような機能を備えているか、どのような使い方を意図しているかを確認し、自組織に適したツールやサービスを採用する必要があります。&lt;/p>
 &lt;p>以下にASMや同じカテゴリに類されることが多いツールやサービスの主な特徴を記載します。&lt;/p>
