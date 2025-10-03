@@ -1,113 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第6章　ASM活用事例 on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter6/</link><description>Recent content in 第6章　ASM活用事例 on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://wg1.isog-j.org/ASMGuidance/docs/chapter6/index.xml" rel="self" type="application/rss+xml"/><item><title>6.1 活用事例1</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter6/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter6/section1/</guid><description>&lt;h1 id="61-活用事例1">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第6章　ASM活用事例 on ASM導入検討を進めるためのガイダンス（基礎編）</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter6/</link><description>Recent content in 第6章　ASM活用事例 on ASM導入検討を進めるためのガイダンス（基礎編）</description><generator>Hugo</generator><language>ja</language><atom:link href="https://wg1.isog-j.org/ASMGuidance/docs/chapter6/index.xml" rel="self" type="application/rss+xml"/><item><title>6.1 活用事例1</title><link>https://wg1.isog-j.org/ASMGuidance/docs/chapter6/section1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wg1.isog-j.org/ASMGuidance/docs/chapter6/section1/</guid><description>&lt;h1 id="61-活用事例1"&gt;
  6.1 活用事例1
- &lt;a class="anchor" href="#61-%e6%b4%bb%e7%94%a8%e4%ba%8b%e4%be%8b1">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="企業aの背景">
+ &lt;a class="anchor" href="#61-%e6%b4%bb%e7%94%a8%e4%ba%8b%e4%be%8b1"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="企業aの背景"&gt;
  企業Aの背景
- &lt;a class="anchor" href="#%e4%bc%81%e6%a5%ada%e3%81%ae%e8%83%8c%e6%99%af">#&lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>企業Aは国内外で多くのITサービスを展開しており、その統制は国内と海外で分かれている&lt;/li>
-&lt;li>国内は&lt;a href="https://www.iiajapan.com/leg/pdf/data/iia/2020.07_1_Three-Lines-Model-Updated-Japanese.pdf">3ラインモデル&lt;/a>により統制、海外のグループ会社は各社に運用管理を一任している&lt;/li>
-&lt;/ul>
-&lt;h2 id="企業aのit資産管理状況">
+ &lt;a class="anchor" href="#%e4%bc%81%e6%a5%ada%e3%81%ae%e8%83%8c%e6%99%af"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;企業Aは国内外で多くのITサービスを展開しており、その統制は国内と海外で分かれている&lt;/li&gt;
+&lt;li&gt;国内は&lt;a href="https://www.iiajapan.com/leg/pdf/data/iia/2020.07_1_Three-Lines-Model-Updated-Japanese.pdf"&gt;3ラインモデル&lt;/a&gt;により統制、海外のグループ会社は各社に運用管理を一任している&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="企業aのit資産管理状況"&gt;
  企業AのIT資産管理状況
- &lt;a class="anchor" href="#%e4%bc%81%e6%a5%ada%e3%81%aeit%e8%b3%87%e7%94%a3%e7%ae%a1%e7%90%86%e7%8a%b6%e6%b3%81">#&lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>国内は上記背景のとおり統制しており、IT資産をある程度管理している&lt;/li>
-&lt;li>国内の事業部門が利用するドメインは、おおよそ単一部署が管理しているが、全ドメインを把握しているわけではない&lt;/li>
-&lt;li>国内の事業部門が利用するインフラは、各事業の特性に応じて、オンプレ、クラウド(AWS、GCP、AZURE、ORACLE、その他)上に構築されており、&lt;strong>どのようなアセットがあるかは一元的に収集されていない&lt;/strong>&lt;/li>
-&lt;li>統制を担うガバナンス部門（第2線）では、国内、海外とも、どのようなホスト(FQDN, IP等)があるか、どんなコンポーネントを利用しているかなど、&lt;strong>全体の可視化ができてはおらず、現場(第一線)の運用に依存しているという状態&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;h2 id="課題">
+ &lt;a class="anchor" href="#%e4%bc%81%e6%a5%ada%e3%81%aeit%e8%b3%87%e7%94%a3%e7%ae%a1%e7%90%86%e7%8a%b6%e6%b3%81"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;国内は上記背景のとおり統制しており、IT資産をある程度管理している&lt;/li&gt;
+&lt;li&gt;国内の事業部門が利用するドメインは、おおよそ単一部署が管理しているが、全ドメインを把握しているわけではない&lt;/li&gt;
+&lt;li&gt;国内の事業部門が利用するインフラは、各事業の特性に応じて、オンプレ、クラウド(AWS、GCP、AZURE、ORACLE、その他)上に構築されており、&lt;strong&gt;どのようなアセットがあるかは一元的に収集されていない&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;統制を担うガバナンス部門（第2線）では、国内、海外とも、どのようなホスト(FQDN, IP等)があるか、どんなコンポーネントを利用しているかなど、&lt;strong&gt;全体の可視化ができてはおらず、現場(第一線)の運用に依存しているという状態&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="課題"&gt;
  課題
- &lt;a class="anchor" href="#%e8%aa%b2%e9%a1%8c">#&lt;/a>
-&lt;/h2>
-&lt;p>上記のような統制をする中で、以下の問題や課題が生じている。&lt;/p>
-&lt;ol>
-&lt;li>自組織に対する外部からのスキャンやOSINTによる調査結果が公開・報道されるケースの増加
-&lt;ul>
-&lt;li>管理対象の資産も多く、外部からのスキャンは抑止できない（構っていられない）&lt;/li>
-&lt;li>先んじて対策を行おうにも、IT資産全体の可視化が出来ていないため、ガバナンス部門（第2線）が把握できる範囲が限られてしまっている。&lt;/li>
-&lt;li>海外の事業部門は統制による対策が進めづらい&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>サイバー攻撃がよりHuman Operatedにシフトした傾向があり、攻撃者目線で自組織を評価し対策を講じる必要がある
-&lt;ul>
-&lt;li>特に「攻撃の初期段階(Reconnaissance, Initial Access)」の観点から現状を把握する必要がある&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;h2 id="asm導入に関する要件定義">
+ &lt;a class="anchor" href="#%e8%aa%b2%e9%a1%8c"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;上記のような統制をする中で、以下の問題や課題が生じている。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自組織に対する外部からのスキャンやOSINTによる調査結果が公開・報道されるケースの増加
+&lt;ul&gt;
+&lt;li&gt;管理対象の資産も多く、外部からのスキャンは抑止できない（構っていられない）&lt;/li&gt;
+&lt;li&gt;先んじて対策を行おうにも、IT資産全体の可視化が出来ていないため、ガバナンス部門（第2線）が把握できる範囲が限られてしまっている。&lt;/li&gt;
+&lt;li&gt;海外の事業部門は統制による対策が進めづらい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;サイバー攻撃がよりHuman Operatedにシフトした傾向があり、攻撃者目線で自組織を評価し対策を講じる必要がある
+&lt;ul&gt;
+&lt;li&gt;特に「攻撃の初期段階(Reconnaissance, Initial Access)」の観点から現状を把握する必要がある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="asm導入に関する要件定義"&gt;
  ASM導入に関する要件定義
- &lt;a class="anchor" href="#asm%e5%b0%8e%e5%85%a5%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e8%a6%81%e4%bb%b6%e5%ae%9a%e7%be%a9">#&lt;/a>
-&lt;/h2>
-&lt;p>課題1、2を解決するため、以下を主軸に要件を細分化をした。&lt;/p>
-&lt;ul>
-&lt;li>機能観点
-&lt;ul>
-&lt;li>資産検出
-&lt;ul>
-&lt;li>攻撃者と同様の手段で、幅広くIT資産を再帰的に検知、把握できること　&lt;/li>
-&lt;li>特に、DNS, ASN, IP, SSL, Whois, etc&lt;/li>
-&lt;li>対象のインフラを限定しないこと（オンプレ、クラウドどちらも対象にできること）&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>セキュリティ評価
-&lt;ul>
-&lt;li>攻撃者がよく利用する、攻撃の初期段階の観点で評価できること&lt;/li>
-&lt;li>検出結果に対してリスク評価を行い、対策の優先順位付けができること&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>また、ASMを運用するメンバーが1名だったため、運用負荷を減らすためにも以下も重要視した。&lt;/p>
-&lt;ul>
-&lt;li>運用観点
-&lt;ul>
-&lt;li>結果の信頼性
-&lt;ul>
-&lt;li>誤検知（偽陽性）の確認、データの信頼性の確認が必要&lt;/li>
-&lt;li>Raw情報に近い情報が提供されていること&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>履歴管理
-&lt;ul>
-&lt;li>履歴情報が提供されていること（資産情報、脆弱性のいずれも）&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>対策推進
-&lt;ul>
-&lt;li>アクションに繋りやすい状態での情報が提供されていること&lt;/li>
-&lt;li>検知理由が明瞭、是正策が提示されているなど&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>他システム統合
-&lt;ul>
-&lt;li>他システムと連携しやすいこと&lt;/li>
-&lt;li>チケット管理システムの接続、APIが公開されているかなど&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="導入前に整理した点">
+ &lt;a class="anchor" href="#asm%e5%b0%8e%e5%85%a5%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e8%a6%81%e4%bb%b6%e5%ae%9a%e7%be%a9"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;課題1、2を解決するため、以下を主軸に要件を細分化をした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;機能観点
+&lt;ul&gt;
+&lt;li&gt;資産検出
+&lt;ul&gt;
+&lt;li&gt;攻撃者と同様の手段で、幅広くIT資産を再帰的に検知、把握できること　&lt;/li&gt;
+&lt;li&gt;特に、DNS, ASN, IP, SSL, Whois, etc&lt;/li&gt;
+&lt;li&gt;対象のインフラを限定しないこと（オンプレ、クラウドどちらも対象にできること）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;セキュリティ評価
+&lt;ul&gt;
+&lt;li&gt;攻撃者がよく利用する、攻撃の初期段階の観点で評価できること&lt;/li&gt;
+&lt;li&gt;検出結果に対してリスク評価を行い、対策の優先順位付けができること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;また、ASMを運用するメンバーが1名だったため、運用負荷を減らすためにも以下も重要視した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;運用観点
+&lt;ul&gt;
+&lt;li&gt;結果の信頼性
+&lt;ul&gt;
+&lt;li&gt;誤検知（偽陽性）の確認、データの信頼性の確認が必要&lt;/li&gt;
+&lt;li&gt;Raw情報に近い情報が提供されていること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;履歴管理
+&lt;ul&gt;
+&lt;li&gt;履歴情報が提供されていること（資産情報、脆弱性のいずれも）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;対策推進
+&lt;ul&gt;
+&lt;li&gt;アクションに繋りやすい状態での情報が提供されていること&lt;/li&gt;
+&lt;li&gt;検知理由が明瞭、是正策が提示されているなど&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;他システム統合
+&lt;ul&gt;
+&lt;li&gt;他システムと連携しやすいこと&lt;/li&gt;
+&lt;li&gt;チケット管理システムの接続、APIが公開されているかなど&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="導入前に整理した点"&gt;
  導入前に整理した点
- &lt;a class="anchor" href="#%e5%b0%8e%e5%85%a5%e5%89%8d%e3%81%ab%e6%95%b4%e7%90%86%e3%81%97%e3%81%9f%e7%82%b9">#&lt;/a>
-&lt;/h2>
-&lt;p>ASMの運用プロセス全体を整理してから開始するのは工数的に難しいため、初期の整理として、ASMツールを導入した際にハレーションが起きない/小さくできるように組み立て、動きながら改善していく方針とした。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>想定した&amp;quot;起こしたくない&amp;quot;ハレーション&lt;/p>
-&lt;ul>
-&lt;li>ASMツールによるアクセスの増加により、サービスサイドのモニタリング（アクセス分析など）に影響する&lt;/li>
-&lt;li>ASMツールによるアクセスでセキュリティアラートが上がり、サービスサイドの調査工数が増える&lt;/li>
-&lt;li>上記によるサービスサイドからガバナンスサイドへの問い合わせの増加&lt;/li>
-&lt;li>情報共有不足による問い合わせ一次受け組織の負担増&lt;/li>
-&lt;li>他の脆弱性管理施策との整合性の不一致&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>上記への解決策&lt;/p></description></item></channel></rss>
+ &lt;a class="anchor" href="#%e5%b0%8e%e5%85%a5%e5%89%8d%e3%81%ab%e6%95%b4%e7%90%86%e3%81%97%e3%81%9f%e7%82%b9"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;ASMの運用プロセス全体を整理してから開始するのは工数的に難しいため、初期の整理として、ASMツールを導入した際にハレーションが起きない/小さくできるように組み立て、動きながら改善していく方針とした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;想定した&amp;quot;起こしたくない&amp;quot;ハレーション&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ASMツールによるアクセスの増加により、サービスサイドのモニタリング（アクセス分析など）に影響する&lt;/li&gt;
+&lt;li&gt;ASMツールによるアクセスでセキュリティアラートが上がり、サービスサイドの調査工数が増える&lt;/li&gt;
+&lt;li&gt;上記によるサービスサイドからガバナンスサイドへの問い合わせの増加&lt;/li&gt;
+&lt;li&gt;情報共有不足による問い合わせ一次受け組織の負担増&lt;/li&gt;
+&lt;li&gt;他の脆弱性管理施策との整合性の不一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;上記への解決策&lt;/p&gt;</description></item></channel></rss>
