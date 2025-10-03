@@ -1,6 +1,6 @@
 # ASM導入検討を進めるためのガイダンス（基礎編）
 
-構築済みのドキュメントはこちら：https://webapppentestguidelines.github.io/ASMGuidance/
+構築済みのドキュメントはこちら：https://wg1.isog-j.org/ASMGuidance/
 
 ## 本ドキュメントの目的
 「Attack Surface Management（ASM、攻撃対象領域管理、攻撃表面管理）」への注目が高まるとともに、様々なサービスやドキュメントが登場しています。  
